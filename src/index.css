@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for Chrome, Safari and Edge */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+/* ================= LIGHT FLOW (SLOW) ================= */
+
+.line-flow {
+  stroke: rgba(255, 251, 3, 0.95);
+  stroke-width: 1.2;
+  stroke-dasharray: 80 1400;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Horizontal motion (slow) */
+.h-flow {
+  animation-name: flow-horizontal;
+  animation-duration: 14s;
+}
+
+/* Vertical motion (slightly slower for depth) */
+.v-flow {
+  animation-name: flow-vertical;
+  animation-duration: 18s;
+}
+
+/* staggered offsets */
+.delay-0 { animation-delay: 0s; }
+.delay-1 { animation-delay: 3s; }
+.delay-2 { animation-delay: 6s; }
+.delay-3 { animation-delay: 9s; }
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes flow-horizontal {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -1600;
+  }
+}
+
+@keyframes flow-vertical {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -1400;
+  }
+}
