@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <>
       <HeroSection className="fade-up" />
-      <ServiceSection className="fade-left" />
       <AboutSection className="fade-right" />
+      <ServiceSection className="fade-left" />
       <ScrollPromo className="zoom-in" />
       <CreateYourVision />
       <PromoHeroSection />

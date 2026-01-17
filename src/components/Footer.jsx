@@ -1,3 +1,47 @@
+import { useEffect, useState } from "react";
+
+const InstagramFeed = ({ igBusinessId, accessToken, limit = 6 }) => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const res = await fetch(
+          `https://graph.facebook.com/v24.0/${igBusinessId}/media?fields=id,caption,media_type,media_url,permalink,timestamp&limit=${limit}&access_token=${accessToken}`
+        );
+        const data = await res.json();
+        setPosts(data.data || []);
+      } catch (err) {
+        console.error("Failed to fetch Instagram posts:", err);
+      }
+    };
+
+    fetchPosts();
+  }, [igBusinessId, accessToken, limit]);
+
+  if (posts.length === 0) return <p className="text-sm opacity-70">No posts found</p>;
+
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+      {posts.map((post) => (
+        <a
+          key={post.id}
+          href={post.permalink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block overflow-hidden rounded-lg hover:scale-105 transform transition"
+        >
+          <img
+            src={post.media_url}
+            alt={post.caption || "Instagram post"}
+            className="w-full h-24 object-cover"
+          />
+        </a>
+      ))}
+    </div>
+  );
+};
+
 const Footer = () => {
   return (
     <footer className="relative w-full text-white overflow-hidden">
@@ -45,11 +89,9 @@ const Footer = () => {
             </p>
 
             <div className="flex gap-4 mt-6">
-              {[
-                { icon: "fa-facebook-f", link: "#" },
+              {[{ icon: "fa-facebook-f", link: "#" },
                 { icon: "fa-instagram", link: "#" },
-                { icon: "fa-linkedin-in", link: "#" },
-              ].map((item, i) => (
+                { icon: "fa-linkedin-in", link: "#" }].map((item, i) => (
                 <a
                   key={i}
                   href={item.link}
@@ -68,10 +110,8 @@ const Footer = () => {
             </h2>
 
             <div className="space-y-4">
-              {[
-                "How Modern Web Apps Scale Faster",
-                "Why Cloud Solutions Matter in 2025",
-              ].map((title, i) => (
+              {["How Modern Web Apps Scale Faster",
+                "Why Cloud Solutions Matter in 2025"].map((title, i) => (
                 <div key={i} className="flex gap-3">
                   <div className="w-16 h-16 rounded-lg bg-blue-600/30 flex items-center justify-center text-sm font-semibold">
                     Blog
@@ -106,13 +146,7 @@ const Footer = () => {
             </h2>
 
             <ul className="space-y-2 text-sm opacity-90">
-              {[
-                "About Us",
-                "Services",
-                "Case Studies",
-                "Careers",
-                "Contact",
-              ].map((item, i) => (
+              {["About Us", "Services", "Case Studies", "Careers", "Contact"].map((item, i) => (
                 <li key={i}>
                   <a href="#" className="hover:text-yellow-300">
                     {item}
@@ -122,25 +156,19 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* TECH STACK / GALLERY */}
+          {/* INSTAGRAM FEED */}
           <div>
             <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <span className="text-yellow-400">●</span> Technologies
+              <span className="text-yellow-400">●</span> Instagram
             </h2>
 
-            <div className="grid grid-cols-3 gap-2">
-              {["React", "Node", "AWS", "Flutter", "Next.js", "MongoDB"].map(
-                (tech, i) => (
-                  <div
-                    key={i}
-                    className="h-20 flex items-center justify-center rounded bg-white/10 text-sm font-medium"
-                  >
-                    {tech}
-                  </div>
-                )
-              )}
-            </div>
+            <InstagramFeed
+              igBusinessId="17841472766045324" // replace with your IG Business ID
+              accessToken="EAANVTggdUQQBQYITu4p7MnhhpZB1YxfcYKO2ZApTNUbzKI7Ci75v67YWrEoUlA51nwhmhDKtNKDc2EhtQ9mZC2JdVjGMt1Oq09dGtZAjp51WuHGH8FMVIONhYNv3WgnxQZAZCHqDDayMhGA2A3vG29IIRKxsEG1ER9uXHWY8C6lembb1PiNpOQUQ7KoaF5GlJVaO4HPl8ZBpAn0pTZAEbB7uhaj1mNsNoM9FxZAyYYpUZD"    // replace with your User access token
+              limit={6}                        // latest 6 posts
+            />
           </div>
+
         </div>
 
         {/* BOTTOM BAR */}

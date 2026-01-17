@@ -25,8 +25,8 @@ export default function AboutSection() {
             {/* IMAGE CARD */}
             <div className="rounded-xl overflow-hidden shadow-lg lg:-mt-24 lg:ml-10">
               <img
-                src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&q=80"
-                alt="Solveig Pink"
+                src="https://img.freepik.com/free-photo/scenes-people-work_23-2151895541.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80"
+                alt="Merc Sphere Team"
                 className="w-[260px] sm:w-[300px] lg:w-full object-cover"
               />
             </div>
@@ -45,44 +45,54 @@ export default function AboutSection() {
         >
           {/* TITLE */}
           <h2 className="text-[22px] sm:text-[26px] font-semibold text-white mb-6">
-            Hi<span className="text-yellow-500">...</span> I’m{" "}
-            <span className="font-bold">Solveig Pink!</span>
+            Welcome<span className="text-yellow-500">.</span> We are{" "}
+            <span className="font-bold">Merc Sphere</span>
           </h2>
 
           {/* BELIEF */}
           <div className="mb-6">
             <h4 className="font-semibold text-yellow-400 mb-1">
-              My Belief
+              Our Belief
             </h4>
             <p className="text-sm text-gray-100 leading-relaxed max-w-md">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit quis
-              nostrud rem aperiam. Ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.
+              At Merc Sphere, we believe in building powerful digital
+              solutions that help brands grow, engage audiences, and
+              create lasting impact. Innovation, integrity, and creativity
+              are at the core of everything we do.
             </p>
           </div>
 
           {/* PROCESS */}
           <div className="mb-8">
             <h4 className="font-semibold text-yellow-400 mb-1">
-              My Process
+              Our Process
             </h4>
             <p className="text-sm text-gray-100 leading-relaxed max-w-md">
-              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
-              dolorem magnam aliquam quaerat voluptatem enim ad minima veniam.
+              We start by understanding your vision, analyze market
+              opportunities, and craft tailored strategies. Our team then
+              executes with precision to deliver measurable and scalable
+              results across digital platforms.
             </p>
 
             <p className="text-sm text-gray-100 mt-2">
-              To me, it’s what living is about.
+              We grow when our clients succeed.
             </p>
           </div>
 
-          {/* CTA */}
-          <button className="flex items-center gap-3 text-sm font-medium text-gray-900">
-            <span className="w-9 h-9 rounded-full bg-yellow-500 flex items-center justify-center text-white">
-              →
+          {/* SLIDING CTA BUTTON */}
+          <div className="group relative h-10 w-[260px] overflow-hidden cursor-pointer">
+            {/* CIRCLE / SLIDE */}
+            <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-white transition-all duration-500 group-hover:w-full">
+              <span className="transition-all duration-300 group-hover:opacity-0">
+                →
+              </span>
+            </div>
+
+            {/* BUTTON TEXT */}
+            <span className="absolute left-12 top-1/2 -translate-y-1/2 text-sm font-medium text-gray-900 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:left-6">
+              START YOUR DIGITAL JOURNEY
             </span>
-            SCHEDULE A SESSION NOW
-          </button>
+          </div>
         </div>
 
         {/* PARTNERS SECTION */}

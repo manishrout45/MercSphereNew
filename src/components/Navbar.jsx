@@ -41,27 +41,33 @@ const Navbar = () => {
       >
         {/* Top Contact Bar (Desktop only) */}
         <div className="hidden md:flex max-w-7xl mx-auto px-4 pt-2 justify-end items-center space-x-6 text-sm text-white">
-          <a href="tel:+919777220660" className="hover:text-yellow-400 flex gap-2">
-            <i className="fa-solid fa-phone"></i> +91 9777 220 660
+          <a href="tel:+919938810752" className="hover:text-yellow-400 flex gap-2">
+            <i className="fa-solid fa-phone"></i> +91 9938 810 752
           </a>
           <a
-            href="mailto:info@ridleypubbbsr.com"
+            href="mailto:mercsphere@gmail.com"
             className="hover:text-yellow-400 flex gap-2"
           >
-            <i className="fa-solid fa-envelope"></i> info@ridleypubbbsr.com
+            <i className="fa-solid fa-envelope"></i> mercsphere@gmail.com
           </a>
         </div>
-
+<hr className="border-t border-gray-700 opacity-40 my-2" />
         {/* Main Navbar */}
-        <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4  flex justify-between items-center">
           {/* Logo */}
-          <Link to="/">
-            <img
-              src="/assets/images/logo/Ridleypub Logo PNG-02.png"
-              alt="Ridley Pub Logo"
-              className="h-14 sm:h-20 object-contain"
-            />
-          </Link>
+<Link to="/" className="flex items-center gap-3">
+  <img
+    src="/assets/images/logo/MercSphere.png"
+    alt="Merc Sphere Logo"
+    className="h-14 sm:h-20 object-contain"
+  />
+
+  {/* Logo Text */}
+  <span className="text-white font-bold tracking-widest text-lg sm:text-2xl">
+    MERC <span className="text-yellow-500">SPHERE</span>
+  </span>
+</Link>
+
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8">
