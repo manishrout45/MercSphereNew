@@ -1,6 +1,6 @@
 export default function CreateYourVision() {
   return (
-    <section className="w-full bg-blue-800 py-28">
+    <section className="w-full bg-blue-900 py-28">
       <div className="max-w-[1100px] mx-auto px-6 text-center">
 
         {/* HEADING */}

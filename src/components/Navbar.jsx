@@ -53,17 +53,17 @@ const Navbar = () => {
         </div>
 <hr className="border-t border-gray-700 opacity-40 my-2" />
         {/* Main Navbar */}
-        <div className="max-w-7xl mx-auto px-4  flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 pb-2  flex justify-between items-center">
           {/* Logo */}
 <Link to="/" className="flex items-center gap-3">
   <img
     src="/assets/images/logo/MercSphere.png"
     alt="Merc Sphere Logo"
-    className="h-14 sm:h-20 object-contain"
+    className="h-14 sm:h-20 object-contain -mt-4"
   />
 
   {/* Logo Text */}
-  <span className="text-white font-bold tracking-widest text-lg sm:text-2xl">
+  <span className="text-white font-bold tracking-widest text-lg sm:text-2xl -mt-2">
     MERC <span className="text-yellow-500">SPHERE</span>
   </span>
 </Link>

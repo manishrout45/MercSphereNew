@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="w-full bg-[#EDEDED] py-16 md:py-24">
+    <section className="w-full bg-[#ffffff] pt-16 md:pt-24">
       <div className="max-w-[1100px] mx-auto px-4 md:px-6 relative">
 
         {/* IMAGE SECTION */}
@@ -41,18 +41,34 @@ export default function AboutSection() {
             mt-12 lg:mt-0 
             px-6 sm:px-8 lg:pl-[420px] lg:pr-10 
             py-10 sm:py-12
+            relative overflow-hidden
           "
         >
+          {/* Faint Logo in Background */}
+<img
+  src="/assets/images/logo/MercSphereDark.png"
+  alt="Background Logo"
+  className="
+    absolute 
+    -top-06 -right-48 
+    w-[400px] sm:w-[500px] lg:w-[600px] 
+    opacity-20 
+    pointer-events-none 
+    select-none
+  "
+/>
+
+
           {/* TITLE */}
-          <h2 className="text-[22px] sm:text-[26px] font-semibold text-white mb-6">
+          <h2 className="text-[22px] sm:text-[26px] font-semibold text-white mb-6 relative z-10">
             Welcome<span className="text-yellow-500">.</span> We are{" "}
             <span className="font-bold">Merc Sphere</span>
           </h2>
 
           {/* BELIEF */}
-          <div className="mb-6">
+          <div className="mb-6 relative z-10">
             <h4 className="font-semibold text-yellow-400 mb-1">
-              Our Belief
+              OUR BELIEF
             </h4>
             <p className="text-sm text-gray-100 leading-relaxed max-w-md">
               At Merc Sphere, we believe in building powerful digital
@@ -63,9 +79,9 @@ export default function AboutSection() {
           </div>
 
           {/* PROCESS */}
-          <div className="mb-8">
+          <div className="mb-8 relative z-10">
             <h4 className="font-semibold text-yellow-400 mb-1">
-              Our Process
+              OUR PROCESS
             </h4>
             <p className="text-sm text-gray-100 leading-relaxed max-w-md">
               We start by understanding your vision, analyze market
@@ -80,7 +96,7 @@ export default function AboutSection() {
           </div>
 
           {/* SLIDING CTA BUTTON */}
-          <div className="group relative h-10 w-[260px] overflow-hidden cursor-pointer">
+          <div className="group relative h-10 w-[260px] overflow-hidden cursor-pointer relative z-10">
             {/* CIRCLE / SLIDE */}
             <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-white transition-all duration-500 group-hover:w-full">
               <span className="transition-all duration-300 group-hover:opacity-0">
@@ -98,7 +114,7 @@ export default function AboutSection() {
         {/* PARTNERS SECTION */}
         <div className="mt-16 md:mt-20 text-center">
           <p className="text-sm text-blue-700 mb-6">
-            Our Partners
+            OUR PARTNERS
           </p>
 
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">

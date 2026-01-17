@@ -18,10 +18,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 // Component imports (for internal use in pages)
 import AboutSection from "./components/AboutSection";
 import ServiceSection from "./components/ServiceSection";
-import GallerySection from "./components/GallerySection";
 import ScrollPromo from "./components/ScrollPromo";
 import CreateYourVision from "./components/CreateYourVision";
-import PromoHeroSection from "./components/PromoHeroSection";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

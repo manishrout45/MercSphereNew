@@ -1,47 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 export default function HeroVideoSection() {
-  const videoRef = useRef(null);
   const containerRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  /* Observe visibility */
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          // ▶️ Autoplay ONLY when visible
-          if (videoRef.current) {
-            videoRef.current.play().catch(() => {});
-          }
-        } else {
-          // ⏸ Pause when out of view (CRITICAL)
-          if (videoRef.current) {
-            videoRef.current.pause();
-          }
-        }
-      },
-      { threshold: 0.35 }
-    );
-
-    if (containerRef.current) observer.observe(containerRef.current);
-    return () => observer.disconnect();
-  }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full overflow-hidden">
-      {/* Video */}
+    <section ref={containerRef} className="relative w-full overflow-hidden py-10">
+      {/* Image instead of Video */}
       <div className="relative w-full h-[300px] sm:h-[420px] md:h-[550px] bg-black">
-        <video
-          ref={videoRef}
-          className="w-full h-full object-cover will-change-transform"
-          src="/assets/videos/Ridley_Video.mp4"
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/assets/images/video-poster.jpg"
+        <img
+          src="/assets/images/PromoHeroSection.png"
+          alt="Hero Background"
+          className="w-full h-full object-cover"
         />
       </div>
 
@@ -58,7 +27,7 @@ export default function HeroVideoSection() {
 
           <div className="relative w-44 h-44 bg-white rounded-full shadow-xl flex items-center justify-center">
             <img
-              src="/assets/images/logo/Ridleypub Logo PNG-01.png"
+              src="/assets/images/logo/MercSphereDark.png"
               alt="Logo"
               className="w-20 md:w-24"
             />

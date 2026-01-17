@@ -1,13 +1,11 @@
 import AboutSection from "../components/AboutSection";
-import Booking from "../components/Booking";
+import ContactSection from "../components/ContactSection";
 import ServiceSection from "../components/ServiceSection"
-import GallerySection from "../components/GallerySection";
 import HeroSection from "../components/HeroSection";
 import HeroVideoSection from "../components/HeroVideoSection";
 import ScrollPromo from "../components/ScrollPromo";
 import useScrollFade from "../hooks/useScrollFade";
 import CreateYourVision from "../components/CreateYourVision";
-import PromoHeroSection from "../components/PromoHeroSection";
 import Testimonial from "../components/Testimonial";
 
 const Home = () => {
@@ -20,12 +18,10 @@ const Home = () => {
       <ServiceSection className="fade-left" />
       <ScrollPromo className="zoom-in" />
       <CreateYourVision />
-      <PromoHeroSection />
-    <GallerySection className="zoom-in" />
-    <HeroVideoSection />
+      <HeroVideoSection />
       <Testimonial />
 
-<Booking />
+<ContactSection />
 
 
     </>

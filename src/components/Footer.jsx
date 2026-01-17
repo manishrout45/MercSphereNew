@@ -164,7 +164,7 @@ const Footer = () => {
 
             <InstagramFeed
               igBusinessId="17841472766045324" // replace with your IG Business ID
-              accessToken="EAANVTggdUQQBQYITu4p7MnhhpZB1YxfcYKO2ZApTNUbzKI7Ci75v67YWrEoUlA51nwhmhDKtNKDc2EhtQ9mZC2JdVjGMt1Oq09dGtZAjp51WuHGH8FMVIONhYNv3WgnxQZAZCHqDDayMhGA2A3vG29IIRKxsEG1ER9uXHWY8C6lembb1PiNpOQUQ7KoaF5GlJVaO4HPl8ZBpAn0pTZAEbB7uhaj1mNsNoM9FxZAyYYpUZD"    // replace with your User access token
+              accessToken="EAANVTggdUQQBQev4PsIOgAaaG6qR4FduOTUCPFnCKIruAZCTkNMpbgwQrYWq1biCpLZBq7ZAK0SYXPUQ4qnXbVFJWflQmeZBScDhaq4YJCxyY6ZBpeqZB3LZAx4vhIWsMBra9KKVZAEtQ8lxORKAWlmaXRmNdLXpkThDnNZCzB0JFijFngv1zaMUGj0ske2dZAaSgCkpO651MvlnkoJ1VH0GeRig1ujgNUhlcaJm6Pfh8io6oZD"    // replace with your User access token
               limit={6}                        // latest 6 posts
             />
           </div>

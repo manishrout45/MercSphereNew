@@ -5,29 +5,34 @@ const testimonials = [
   {
     name: "Michael Jackson",
     role: "CEO of Company",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: "https://img.freepik.com/free-vector/user-circles-set_78370-4704.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
   },
   {
     name: "Parvez Hossein",
     role: "CEO of Company",
-    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    image: "https://img.freepik.com/free-vector/user-circles-set_78370-4704.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
   },
   {
     name: "Shoikot Hasan",
     role: "CEO of Company",
-    image: "https://randomuser.me/api/portraits/men/65.jpg",
+    image: "https://img.freepik.com/free-vector/user-circles-set_78370-4704.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
   },
 ];
 
 export default function Testimonial() {
   return (
-    <section className="w-full bg-white pb-20">
+    <section className="w-full bg-blue-50 pt-10 pb-20">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* HEADING */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
-          User <span className="text-blue-600">Testimonials</span>
-        </h2>
+        {/* NEW HEADING */}
+        <div className="text-center mb-16">
+          <p className="text-sm text-blue-500 uppercase tracking-widest mb-2">
+            Testimonials
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+            Take a Look at What Our Amazing <br /> Clients Have Said
+          </h2>
+        </div>
 
         {/* CARDS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
@@ -56,7 +61,7 @@ export default function Testimonial() {
                 {[...Array(5)].map((_, i) => (
                   <FaStar
                     key={i}
-                    className="text-sm text-blue-600 group-hover:text-white transition"
+                    className="text-sm text-yellow-400 group-hover:text-white transition"
                   />
                 ))}
               </div>
