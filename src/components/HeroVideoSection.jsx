@@ -8,7 +8,7 @@ export default function HeroVideoSection() {
       {/* Image instead of Video */}
       <div className="relative w-full h-[300px] sm:h-[420px] md:h-[550px] bg-black">
         <img
-          src="/assets/images/PromoHeroSection.png"
+          src="/assets/images/PromoHeroSection3.png"
           alt="Hero Background"
           className="w-full h-full object-cover"
         />
@@ -19,10 +19,10 @@ export default function HeroVideoSection() {
         <div className="relative w-44 h-44 md:w-52 md:h-52 flex items-center justify-center">
           <div className="absolute inset-0 animate-spinSlow z-10">
             <img
-              src="/assets/images/Ridley Pub & Chimes Lounge.png"
+              src="/assets/images/Bhubaneswar.png"
               alt="Circular Rotating Text"
               className="w-full h-full select-none pointer-events-none"
-            />
+            />  
           </div>
 
           <div className="relative w-44 h-44 bg-white rounded-full shadow-xl flex items-center justify-center">

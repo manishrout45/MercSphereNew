@@ -77,9 +77,13 @@ const ScrollPromo = () => {
           id="scrollText"
           className="space-y-4 sm:space-y-6 transition-transform duration-100"
         >
-          <h2 className="text-white text-3xl sm:text-5xl font-semibold">
-            Building Digital <br /> Solutions That Scale
-          </h2>
+          <h2 className="text-white text-3xl sm:text-5xl font-bold leading-tight">
+  BUILDING <span className="text-yellow-400">DIGITAL</span>
+  <span className="block">
+    <span className="text-yellow-400">SOLUTIONS</span> THAT SCALE
+  </span>
+</h2>
+
 
           <p className="text-white/90 text-sm sm:text-lg max-w-3xl mx-auto">
             We help startups and enterprises design, develop, and deploy

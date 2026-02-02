@@ -17,7 +17,7 @@ export default function AboutSection() {
 
             {/* VERTICAL LABEL */}
             <div className="absolute top-8 -left-2 z-20 hidden lg:block">
-              <span className="bg-yellow-600 text-white text-[10px] tracking-widest px-4 py-1 rounded-md rotate-[-90deg] block">
+              <span className="bg-yellow-400 text-blue-500 font-extrabold text-[10px] tracking-widest px-4 py-1 rounded-md rotate-[-90deg] block">
                 ABOUT US
               </span>
             </div>
@@ -113,7 +113,7 @@ export default function AboutSection() {
 
         {/* PARTNERS SECTION */}
         <div className="mt-16 md:mt-20 text-center">
-          <p className="text-sm text-blue-700 mb-6">
+          <p className="text-xs tracking-widest text-blue-500 mb-6 uppercase">
             OUR PARTNERS
           </p>
 

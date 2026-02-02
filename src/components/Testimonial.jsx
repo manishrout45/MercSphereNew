@@ -1,89 +1,145 @@
-import React from "react";
-import { FaStar, FaQuoteLeft } from "react-icons/fa";
+import { useState } from "react";
 
 const testimonials = [
   {
-    name: "Michael Jackson",
-    role: "CEO of Company",
-    image: "https://img.freepik.com/free-vector/user-circles-set_78370-4704.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
+    name: "Michael",
+    company: "MDS Manufacturing",
+    image:
+      "https://img.freepik.com/free-psd/contact-icon-illustration-isolated_23-2151903337.jpg",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
   },
   {
-    name: "Parvez Hossein",
-    role: "CEO of Company",
-    image: "https://img.freepik.com/free-vector/user-circles-set_78370-4704.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
+    name: "Diane",
+    company: "ABC Rentals",
+    image:
+      "https://img.freepik.com/free-psd/contact-icon-illustration-isolated_23-2151903337.jpg",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.",
   },
   {
-    name: "Shoikot Hasan",
-    role: "CEO of Company",
-    image: "https://img.freepik.com/free-vector/user-circles-set_78370-4704.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
+    name: "Allison",
+    company: "Grand Party Rental",
+    image:
+      "https://img.freepik.com/free-psd/contact-icon-illustration-isolated_23-2151903337.jpg",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.",
   },
 ];
 
 export default function Testimonial() {
-  return (
-    <section className="w-full bg-blue-50 pt-10 pb-20">
-      <div className="max-w-7xl mx-auto px-6">
+  const [index, setIndex] = useState(0);
 
-        {/* NEW HEADING */}
-        <div className="text-center mb-16">
-          <p className="text-sm text-blue-500 uppercase tracking-widest mb-2">
-            Testimonials
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
-            Take a Look at What Our Amazing <br /> Clients Have Said
+  const next = () =>
+    setIndex((prev) => (prev + 1) % testimonials.length);
+
+  const prev = () =>
+    setIndex((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+
+  return (
+    <section className="bg-[#0B3A78] py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+
+        {/* LEFT CONTENT */}
+        <div className="text-white text-center lg:text-left">
+          <div className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center mb-6 mx-auto lg:mx-0">
+            <span className="text-4xl font-bold">“</span>
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
+            Connect with <br className="hidden sm:block" /> other members
           </h2>
+
+          <p className="text-blue-100 max-w-md mx-auto lg:mx-0 mb-6 text-sm sm:text-base">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat.
+          </p>
+
+          <button className="text-white font-medium flex items-center gap-2 hover:gap-3 transition-all mx-auto lg:mx-0">
+            Connect now <span>➜</span>
+          </button>
         </div>
 
-        {/* CARDS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
-          {testimonials.map((item, index) => (
-            <div
-              key={index}
-              className="group relative rounded-2xl px-6 pt-16 pb-10 text-center
-                         bg-white text-gray-800 shadow-lg
-                         transition-all duration-300
-                         hover:bg-blue-600 hover:text-white
-                         hover:scale-105 hover:shadow-2xl"
-            >
-              {/* AVATAR */}
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-                <div className="w-20 h-20 rounded-full bg-white p-1 shadow-md">
+        {/* RIGHT TESTIMONIALS */}
+        <div className="relative">
+          <div
+            className="
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              md:grid-cols-3
+              gap-6
+              px-2
+            "
+          >
+            {testimonials.map((item, i) => (
+              <div
+                key={i}
+                className={`
+                  bg-white rounded-lg shadow-lg p-5
+                  w-full max-w-[260px]
+                  mx-auto
+                  transition-all duration-500
+                  ${
+                    i === index
+                      ? "opacity-100 scale-105"
+                      : "opacity-70 scale-95"
+                  }
+                `}
+              >
+                <div className="relative">
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-full h-full rounded-full object-cover"
+                    className="rounded-md mb-4 h-40 w-full object-cover"
                   />
+                  <span className="absolute -top-3 -left-3 bg-blue-500 text-white w-8 h-8 flex items-center justify-center rounded-full text-xl">
+                    “
+                  </span>
                 </div>
+
+                <p className="text-gray-600 text-sm mb-5 min-h-[72px]">
+                  {item.text}
+                </p>
+
+                <h4 className="font-semibold">{item.name}</h4>
+                <p className="text-sm text-gray-400">{item.company}</p>
               </div>
+            ))}
+          </div>
 
-              {/* STARS */}
-              <div className="flex justify-center gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar
-                    key={i}
-                    className="text-sm text-yellow-400 group-hover:text-white transition"
-                  />
-                ))}
-              </div>
+          {/* CONTROLS */}
+          <div className="flex justify-center items-center gap-4 mt-8">
+            <button
+              onClick={prev}
+              className="w-9 h-9 border border-white text-white flex items-center justify-center rounded hover:bg-white hover:text-[#0B3A78] transition"
+            >
+              ‹
+            </button>
 
-              {/* NAME */}
-              <h3 className="text-lg font-semibold">{item.name}</h3>
+            <button
+              onClick={next}
+              className="w-9 h-9 border border-white text-white flex items-center justify-center rounded hover:bg-white hover:text-[#0B3A78] transition"
+            >
+              ›
+            </button>
 
-              <p className="text-sm mb-5 text-gray-500 group-hover:text-white/80 transition">
-                {item.role}
-              </p>
-
-              {/* QUOTE */}
-              <FaQuoteLeft className="mx-auto mb-4 text-3xl text-blue-500 group-hover:text-white/70 transition" />
-
-              {/* TEXT */}
-              <p className="text-sm leading-relaxed text-gray-600 group-hover:text-white/90 transition">
-                Lorem Ipsum is simply dummy text of the Printing industry.
-                Lorem Ipsum has been industry's standard.
-              </p>
+            <div className="flex gap-2 ml-4">
+              {testimonials.map((_, i) => (
+                <span
+                  key={i}
+                  className={`w-2.5 h-2.5 rounded-full ${
+                    i === index ? "bg-white" : "bg-white/40"
+                  }`}
+                />
+              ))}
             </div>
-          ))}
+          </div>
         </div>
+
       </div>
     </section>
   );

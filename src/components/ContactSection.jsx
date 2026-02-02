@@ -8,17 +8,17 @@ export default function ContactSection() {
         {/* LEFT CONTENT */}
         <div>
           <p className="text-xs tracking-widest text-blue-500 mb-3 uppercase">
-            // Contact Us
+            Contact Us
           </p>
 
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-5">
-            Get in touch with our <br className="hidden sm:block" />
-            expert agents
+            Get in touch with MercSphere<br className="hidden sm:block" />
+            expert team
           </h2>
 
           <p className="text-gray-500 text-sm max-w-md mb-10 leading-relaxed">
-            Our success is determined not only by the results we acquire,
-            but also by the manner in which we achieve them on way to see that.
+            We'd love to hear from you. Whether you have a question or need support,
+            our team at MercSphere is ready to help you quickly and effectively.
           </p>
 
           {/* CONTACT INFO */}
@@ -30,9 +30,9 @@ export default function ContactSection() {
                 <FiPhone />
               </span>
               <div>
-                <p className="text-gray-400">Have any question?</p>
+                <p className="text-gray-400">Call us</p>
                 <p className="font-medium text-gray-900">
-                  Free +92 (8800) - 8960
+                  +91 993-881-0752
                 </p>
               </div>
             </div>
@@ -43,9 +43,9 @@ export default function ContactSection() {
                 <FiMail />
               </span>
               <div>
-                <p className="text-gray-400">Write email</p>
+                <p className="text-gray-400">Email us</p>
                 <p className="font-medium text-gray-900">
-                  needhelp@company.com
+                  mercsphere@gmail.com
                 </p>
               </div>
             </div>
@@ -56,9 +56,9 @@ export default function ContactSection() {
                 <FiMapPin />
               </span>
               <div>
-                <p className="text-gray-400">Visit now</p>
+                <p className="text-gray-400">Our Location</p>
                 <p className="font-medium text-gray-900">
-                  80 broklyn golden street, New York
+                  Bhubaneswar, Odisha
                 </p>
               </div>
             </div>

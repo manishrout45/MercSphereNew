@@ -5,8 +5,9 @@ import HeroSection from "../components/HeroSection";
 import HeroVideoSection from "../components/HeroVideoSection";
 import ScrollPromo from "../components/ScrollPromo";
 import useScrollFade from "../hooks/useScrollFade";
-import CreateYourVision from "../components/CreateYourVision";
+import OurProjects from "../components/OurProjects";
 import Testimonial from "../components/Testimonial";
+import WireAnimation from "../components/WireAnimation";
 
 const Home = () => {
   useScrollFade(); // default class "fade-up"
@@ -17,7 +18,8 @@ const Home = () => {
       <AboutSection className="fade-right" />
       <ServiceSection className="fade-left" />
       <ScrollPromo className="zoom-in" />
-      <CreateYourVision />
+      <OurProjects />
+      <WireAnimation />
       <HeroVideoSection />
       <Testimonial />
 

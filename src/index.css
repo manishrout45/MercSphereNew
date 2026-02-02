@@ -61,3 +61,75 @@
     stroke-dashoffset: -1400;
   }
 }
+
+/* ===============================
+   BASE WIRES
+================================ */
+
+.wire {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 12px currentColor);
+}
+
+/* Wire colors + animations */
+.wire1 { stroke: #1e90ff; animation: wave1 4.5s ease-in-out infinite; }
+.wire2 { stroke: #ff0044; animation: wave2 5.6s ease-in-out infinite; }
+.wire3 { stroke: #00ff88; animation: wave3 4.2s ease-in-out infinite; }
+.wire4 { stroke: #ffaa00; animation: wave4 6.4s ease-in-out infinite; }
+
+/* Output wire */
+.single-wire {
+  stroke: white;
+  stroke-width: 5;
+  filter: drop-shadow(0 0 10px white);
+  stroke-dasharray: 60 140;
+  animation: flow 2s linear infinite;
+}
+
+/* Mobile clarity */
+.mobile-wire {
+  stroke-width: 8;
+}
+
+@media (min-width: 640px) {
+  .mobile-wire {
+    stroke-width: 6;
+  }
+}
+
+/* Output flow */
+@keyframes flow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -220; }
+}
+
+/* ===============================
+   WAVE ANIMATIONS
+================================ */
+
+@keyframes wave1 {
+  0% { d: path("M0 120 C180 60, 340 300, 520 200"); }
+  50% { d: path("M0 120 C180 300, 340 60, 520 200"); }
+  100% { d: path("M0 120 C180 60, 340 300, 520 200"); }
+}
+
+@keyframes wave2 {
+  0% { d: path("M0 180 C200 40, 360 340, 520 200"); }
+  50% { d: path("M0 180 C200 340, 360 40, 520 200"); }
+  100% { d: path("M0 180 C200 40, 360 340, 520 200"); }
+}
+
+@keyframes wave3 {
+  0% { d: path("M0 240 C190 100, 350 360, 520 200"); }
+  50% { d: path("M0 240 C190 360, 350 100, 520 200"); }
+  100% { d: path("M0 240 C190 100, 350 360, 520 200"); }
+}
+
+@keyframes wave4 {
+  0% { d: path("M0 300 C210 140, 380 420, 520 200"); }
+  50% { d: path("M0 300 C210 420, 380 140, 520 200"); }
+  100% { d: path("M0 300 C210 140, 380 420, 520 200"); }
+}
