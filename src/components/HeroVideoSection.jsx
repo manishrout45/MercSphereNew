@@ -4,7 +4,7 @@ export default function HeroVideoSection() {
   const containerRef = useRef(null);
 
   return (
-    <section ref={containerRef} className="relative w-full overflow-hidden py-10">
+    <section ref={containerRef} className="relative w-full overflow-hidden">
       {/* Image instead of Video */}
       <div className="relative w-full h-[300px] sm:h-[420px] md:h-[550px] bg-black">
         <img
@@ -15,7 +15,7 @@ export default function HeroVideoSection() {
       </div>
 
       {/* Circular Logo */}
-      <div className="absolute left-1/2 top-[calc(300px-70px)] sm:top-[calc(420px-80px)] md:top-[calc(550px-100px)] -translate-x-1/2">
+      <div className="absolute left-1/2 top-[200px] sm:top-[280px] md:top-[360px] -translate-x-1/2">
         <div className="relative w-44 h-44 md:w-52 md:h-52 flex items-center justify-center">
           <div className="absolute inset-0 animate-spinSlow z-10">
             <img
@@ -36,7 +36,7 @@ export default function HeroVideoSection() {
       </div>
 
       {/* Spacer */}
-      <div className="w-full h-40 bg-white"></div>
+      <div className="w-full h-24 sm:h-20 bg-white"></div>
     </section>
   );
 }

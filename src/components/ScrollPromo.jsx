@@ -90,7 +90,7 @@ const ScrollPromo = () => {
             high-performance digital products.
           </p>
 
-          <button className="mt-4 bg-white text-gray-900 px-6 py-3 rounded-md font-semibold hover:bg-gray-200 transition">
+          <button className="mt-4 bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
             GET A FREE CONSULTATION
           </button>
         </div>

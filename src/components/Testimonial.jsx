@@ -30,17 +30,28 @@ const testimonials = [
 export default function Testimonial() {
   const [index, setIndex] = useState(0);
 
-  const next = () =>
-    setIndex((prev) => (prev + 1) % testimonials.length);
-
+  const next = () => setIndex((p) => (p + 1) % testimonials.length);
   const prev = () =>
-    setIndex((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
+    setIndex((p) => (p === 0 ? testimonials.length - 1 : p - 1));
 
   return (
-    <section className="bg-[#0B3A78] py-16 md:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative bg-[#0B3A78] pt-28 pb-16 md:pb-20 overflow-hidden">
+      
+      {/* ✅ WHITE TOP WAVE (VISIBLE) */}
+      <div className="absolute top-0 left-0 w-full z-10">
+        <svg
+          viewBox="0 0 1440 120"
+          className="w-full h-[120px]"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#ffffff"
+            d="M0,0 C120,40 240,70 360,75 C480,80 600,60 720,55 C840,50 960,70 1080,80 C1200,90 1320,80 1440,70 L1440,0 L0,0 Z"
+          />
+        </svg>
+      </div>
+
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
 
         {/* LEFT CONTENT */}
         <div className="text-white text-center lg:text-left">
@@ -65,30 +76,15 @@ export default function Testimonial() {
 
         {/* RIGHT TESTIMONIALS */}
         <div className="relative">
-          <div
-            className="
-              grid
-              grid-cols-1
-              sm:grid-cols-2
-              md:grid-cols-3
-              gap-6
-              px-2
-            "
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-2">
             {testimonials.map((item, i) => (
               <div
                 key={i}
-                className={`
-                  bg-white rounded-lg shadow-lg p-5
-                  w-full max-w-[260px]
-                  mx-auto
-                  transition-all duration-500
-                  ${
-                    i === index
-                      ? "opacity-100 scale-105"
-                      : "opacity-70 scale-95"
-                  }
-                `}
+                className={`bg-white rounded-lg shadow-lg p-5 w-full max-w-[260px] mx-auto transition-all duration-500 ${
+                  i === index
+                    ? "opacity-100 scale-105"
+                    : "opacity-70 scale-95"
+                }`}
               >
                 <div className="relative">
                   <img

@@ -103,7 +103,7 @@ export default function ServiceSection() {
               {/* BUTTON */}
               <button
                 className="
-                  px-5 py-2 text-sm rounded-md font-medium transition
+                  px-5 py-2 text-sm rounded-full font-medium transition
                   bg-yellow-400 text-white
                   hover:bg-yellow-500
                 "

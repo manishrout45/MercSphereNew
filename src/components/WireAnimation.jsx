@@ -9,12 +9,34 @@ export default function WireAnimation() {
   ];
 
   return (
-    <div className="relative w-full h-[420px] sm:h-[480px] md:h-[540px] bg-black overflow-hidden flex items-center justify-center">
+<div
+  className="
+    relative w-full
+    h-[420px] sm:h-[480px] md:h-[540px]
+    overflow-hidden flex items-center justify-center
+  "
+>
+  {/* 🎥 BACKGROUND VIDEO */}
+  <video
+    className="absolute inset-0 w-full h-full object-cover z-0"
+    src="/assets/videos/bgVideo.mp4"   // 👈 your video path
+    autoPlay
+    muted
+    loop
+    playsInline
+  />
+
+  {/* 🔲 BLACK OVERLAY */}
+  <div className="absolute inset-0 bg-black/70 z-10" />
 
       {/* HEADLINE */}
-      <h2 className="absolute top-8 sm:top-12 w-full text-center
-                     text-2xl sm:text-3xl md:text-4xl
-                     font-extrabold text-white z-20 leading-tight">
+      <h2
+        className="
+          absolute top-8 sm:top-12 w-full text-center
+          text-2xl sm:text-3xl md:text-4xl
+          font-extrabold text-white z-20 leading-tight
+        "
+      >
         Many Problems!! <br />
         <span className="text-blue-500 drop-shadow-[0_0_12px_rgba(59,130,246,0.8)]">
           One Solution
@@ -23,11 +45,11 @@ export default function WireAnimation() {
 
       {/* SVG WIRES */}
       <svg
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full h-full z-10"
         viewBox="0 0 1200 400"
         preserveAspectRatio="xMidYMid meet"
       >
-        {/* WIRES */}
+        {/* INPUT WIRES */}
         <path className="wire wire1 mobile-wire" d="M0 120 C180 60, 340 300, 520 200" />
         <path className="wire wire2 mobile-wire" d="M0 180 C200 40, 360 340, 520 200" />
         <path className="wire wire3 mobile-wire" d="M0 240 C190 100, 350 360, 520 200" />
@@ -77,26 +99,26 @@ export default function WireAnimation() {
         Merc Sphere
       </div>
 
-      {/* 🔥 MOBILE DENOTATION BAR (BOTTOM, SINGLE ROW) */}
-<div
-  className="absolute bottom-6 left-1/2 -translate-x-1/2
-             sm:hidden z-20
-             flex gap-3 px-4 py-2
-             rounded-full bg-black/70 backdrop-blur
-             border border-white/10"
->
-  {services.map((s, i) => (
-    <span
-      key={i}
-      className="text-[11px] font-medium whitespace-nowrap"
-      style={{ color: s.color }}
-    >
-      {s.name}
-    </span>
-  ))}
-</div>
-
-
+      {/* 🔥 MOBILE DENOTATION BAR */}
+      <div
+        className="
+          absolute bottom-6 left-1/2 -translate-x-1/2
+          sm:hidden z-20
+          flex gap-3 px-4 py-2
+          rounded-full bg-black/70 backdrop-blur
+          border border-white/10
+        "
+      >
+        {services.map((s, i) => (
+          <span
+            key={i}
+            className="text-[11px] font-medium whitespace-nowrap"
+            style={{ color: s.color }}
+          >
+            {s.name}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
