@@ -1,47 +1,63 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import {
+  faCode,
+  faPalette,
+  faPenRuler,
+  faMagnifyingGlassChart,
+  faBullhorn,
+  faShareNodes,
+} from "@fortawesome/free-solid-svg-icons";
+
 export default function ServiceSection() {
   const services = [
     {
       title: "Website Development",
       desc:
         "We deliver scalable website development solutions with robust security measures and ongoing support.",
-      img: "https://img.freepik.com/premium-photo/browser-png-illustration-transparent-background_53876-995133.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
+      icon: faCode,
+      path: "/webdevelopment",
     },
-        {
+    {
       title: "Graphic Designing",
       desc:
         "Merc Sphere offers the best SMO strategies that integrate seamlessly to give your brand a competitive edge.",
-      img: "https://img.freepik.com/premium-photo/online-business-illustration-png-sticker-transparent-background_53876-1002019.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
+      icon: faPalette,
+      path: "/graphicdesigning",
     },
-        {
+    {
       title: "UI/UX",
       desc:
         "Our professionals design websites that reflect your brand, increase your credibility, and help you stand out digitally.",
-      img: "https://img.freepik.com/premium-photo/social-media-statistics-png-sticker-3d-graphic-transparent-background_53876-976968.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
+      icon: faPenRuler,
+      path: "/uiux",
     },
     {
       title: "SEO Services",
       desc:
         "Our team utilizes proven search engine optimization strategies to drive organic traffic and increase conversions.",
-      img: "https://img.freepik.com/premium-photo/marketing-png-word-sticker-mixed-media-design-transparent-background_53876-1037013.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
+      icon: faMagnifyingGlassChart,
+      path: "/seoservices",
     },
-
     {
       title: "Digital Marketing",
       desc:
         "Supercharge your online advertising and build a robust online presence with Merc Sphere PPC services.",
-      img: "https://img.freepik.com/premium-photo/png-startup-business-computer-table-desk_53876-909688.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
+      icon: faBullhorn,
+      path: "/digitalmarketing",
     },
     {
       title: "SMM Services",
       desc:
         "Our specialists harness the might of social media to promote your business and drive meaningful results.",
-      img: "https://img.freepik.com/premium-photo/png-social-network-design-element-transparent-background_53876-943377.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80",
+      icon: faShareNodes,
+      path: "/smmservices",
     },
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-[#f1f6f9] to-blue-800 pt-40 pb-24 overflow-hidden">
-      {/* ================= WAVE BACKGROUND ================= */}
+    <section className="relative bg-blue-800 pt-40 pb-24 overflow-hidden">
+      {/* WAVE */}
       <div className="absolute top-0 left-0 w-full leading-none">
         <svg
           className="block w-full h-40"
@@ -55,61 +71,67 @@ export default function ServiceSection() {
         </svg>
       </div>
 
-      {/* ================= CONTENT ================= */}
       <div className="relative max-w-7xl mx-auto px-4">
         {/* HEADER */}
         <div className="text-center mb-16">
-          <p className="text-xs tracking-widest text-blue-500 mb-2 uppercase">
+          <p className="text-xs tracking-widest text-blue-200 mb-2 uppercase">
             OUR SERVICES
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-semibold text-white">
             What We Do For You
           </h2>
         </div>
 
-        {/* SERVICES GRID */}
+        {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {services.map((service, i) => (
             <div
               key={i}
               className="
-                group rounded-xl p-8 text-center shadow-md
-                bg-white text-gray-800
+                group relative rounded-xl p-8 text-center shadow-lg
+                bg-white text-gray-800 overflow-hidden
                 transition-all duration-500 ease-out
                 hover:scale-105 hover:text-white
-                hover:bg-[radial-gradient(circle_at_center,_#3b82f6_0%,_#1e3a8a_65%,_#0f172a_100%)]
+                hover:bg-gradient-to-br from-indigo-600 via-blue-700 to-slate-900
               "
             >
-              {/* IMAGE */}
-              <img
-                src={service.img}
-                alt={service.title}
+              {/* DOT PATTERN */}
+              <div
                 className="
-                  h-28 mx-auto mb-6 transition-all duration-500
-                  
-                "
-              />
+                absolute inset-0 opacity-0 group-hover:opacity-20
+                bg-[radial-gradient(#ffffff_1px,transparent_1px)]
+                [background-size:18px_18px] transition duration-500
+              "
+              ></div>
+
+              {/* ICON */}
+              <div className="relative mb-6 text-blue-600 group-hover:text-white transition-all duration-500">
+                <FontAwesomeIcon
+                  icon={service.icon}
+                  className="text-5xl group-hover:scale-125 transition-all duration-500"
+                />
+              </div>
 
               {/* TITLE */}
-              <h3 className="text-lg font-semibold mb-4">
+              <h3 className="relative text-lg font-semibold mb-4">
                 {service.title}
               </h3>
 
-              {/* DESCRIPTION */}
-              <p className="text-sm mb-6 leading-relaxed">
+              {/* DESC */}
+              <p className="relative text-sm mb-6 leading-relaxed">
                 {service.desc}
               </p>
 
-              {/* BUTTON */}
-              <button
+              {/* READ MORE */}
+              <Link
+                to={service.path}
                 className="
-                  px-5 py-2 text-sm rounded-full font-medium transition
-                  bg-yellow-400 text-white
-                  hover:bg-yellow-500
+                  relative inline-block px-5 py-2 text-sm rounded-full font-medium
+                  transition bg-yellow-400 text-white hover:bg-yellow-500
                 "
               >
                 Read more
-              </button>
+              </Link>
             </div>
           ))}
         </div>

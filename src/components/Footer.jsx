@@ -66,12 +66,12 @@ const Footer = () => {
 
             <p className="mt-3 text-sm flex items-center gap-2">
               <i className="fa-solid fa-phone text-yellow-400"></i>
-              +91 9777 220 660
+              +91 993 881 0752
             </p>
 
             <p className="mt-2 text-sm flex items-center gap-2">
               <i className="fa-solid fa-envelope text-yellow-400"></i>
-              contact@mercsphere.com
+              mercsphere@gmail.com
             </p>
 
             <div className="flex gap-4 mt-6">

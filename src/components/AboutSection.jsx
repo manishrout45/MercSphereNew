@@ -17,7 +17,7 @@ export default function AboutSection() {
 
             {/* VERTICAL LABEL */}
             <div className="absolute top-8 -left-2 z-20 hidden lg:block">
-              <span className="bg-yellow-400 text-blue-500 font-extrabold text-[10px] tracking-widest px-4 py-1 rounded-md rotate-[-90deg] block">
+              <span className="bg-yellow-400 text-blue-800 font-extrabold text-[10px] tracking-widest px-4 py-1 rounded-md rotate-[-90deg] block">
                 ABOUT US
               </span>
             </div>
@@ -96,7 +96,7 @@ export default function AboutSection() {
           </div>
 
           {/* SLIDING CTA BUTTON */}
-          <div className="group relative h-10 w-[260px] overflow-hidden cursor-pointer relative z-10">
+          <div className="group h-10 w-[260px] overflow-hidden cursor-pointer relative z-10">
             {/* CIRCLE / SLIDE */}
             <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center text-white transition-all duration-500 group-hover:w-full">
               <span className="transition-all duration-300 group-hover:opacity-0">
@@ -120,10 +120,10 @@ export default function AboutSection() {
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {[
               "https://www.onnroad.com/assets/images/logo/onnroad-new.png",
-              "/logos/frame-architecture.svg",
-              "/logos/copixel.svg",
-              "/logos/reverland.svg",
-              "/logos/bavier-fintech.svg",
+              "/assets/images/GPSZone.png",
+              "https://triptopuri.com/images/TripToPuriLogo.png",
+              "https://www.utkalfoundation.in/images/Logo_Utkal.png",
+              "https://dealinee.com/src/assets/new%20logo%20black.png",
             ].map((logo, i) => (
               <img
                 key={i}

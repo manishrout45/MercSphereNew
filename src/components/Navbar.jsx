@@ -19,16 +19,45 @@ const Navbar = () => {
 
   const pathname = location.pathname;
   const path = pathname === "/" ? "home" : pathname.slice(1);
-  const isServicesActive = pathname.startsWith("/services");
+  const isServicesActive =
+    pathname === "/services" ||
+    pathname === "/webdevelopment" ||
+    pathname === "/graphicdesigning" ||
+    pathname === "/digitalmarketing" ||
+    pathname === "/seoservices" ||
+    pathname === "/appdevelopment";
 
-  const navItems = ["home", "about", "Services", "gallery", "contact"];
+  const navItems = ["home", "about", "Services", "career", "contact"];
 
+  /* ===============================
+     SERVICES DROPDOWN LIST
+  =============================== */
   const servicesList = [
-    { name: "Web Development", icon: <FaLaptopCode />, link: "/services/web" },
-    { name: "Graphic Designing", icon: <FaPaintBrush />, link: "/services/design" },
-    { name: "Digital Marketing", icon: <FaBullhorn />, link: "/services/marketing" },
-    { name: "SEO Optimization", icon: <FaSearch />, link: "/services/seo" },
-    { name: "App Development", icon: <FaMobileAlt />, link: "/services/app" },
+    {
+      name: "Web Development",
+      icon: <FaLaptopCode />,
+      link: "/webdevelopment",
+    },
+    {
+      name: "Graphic Designing",
+      icon: <FaPaintBrush />,
+      link: "/graphicdesigning",
+    },
+    {
+      name: "Digital Marketing",
+      icon: <FaBullhorn />,
+      link: "/digitalmarketing",
+    },
+    {
+      name: "SEO Optimization",
+      icon: <FaSearch />,
+      link: "/seoservices",
+    },
+    {
+      name: "App Development",
+      icon: <FaMobileAlt />,
+      link: "/appdevelopment",
+    },
   ];
 
   /* ===============================
@@ -47,6 +76,13 @@ const Navbar = () => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
     return () => (document.body.style.overflow = "auto");
   }, [mobileOpen]);
+
+  /* ===============================
+     CLOSE SERVICES ON ROUTE CHANGE
+  =============================== */
+  useEffect(() => {
+    setServicesOpen(false);
+  }, [pathname]);
 
   /* ===============================
      CLICK OUTSIDE CLOSE (SERVICES)
@@ -88,7 +124,10 @@ const Navbar = () => {
           <a href="tel:+919938810752" className="hover:text-yellow-400 flex gap-2">
             <i className="fa-solid fa-phone"></i> +91 9938 810 752
           </a>
-          <a href="mailto:mercsphere@gmail.com" className="hover:text-yellow-400 flex gap-2">
+          <a
+            href="mailto:mercsphere@gmail.com"
+            className="hover:text-yellow-400 flex gap-2"
+          >
             <i className="fa-solid fa-envelope"></i> mercsphere@gmail.com
           </a>
         </div>
@@ -152,7 +191,6 @@ const Navbar = () => {
                     }`}
                   >
                     Services <span className="text-sm">▾</span>
-
                     {isServicesActive && (
                       <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-yellow-500 rounded-full" />
                     )}
@@ -244,10 +282,10 @@ const Navbar = () => {
         <div className="space-y-3 text-sm">
           <h3 className="font-semibold text-base">Contact Us</h3>
           <p className="flex gap-2">
-            <i className="fa-solid fa-phone"></i> +91 9777 220 660
+            <i className="fa-solid fa-phone"></i> +91 993 881 0752
           </p>
           <p className="flex gap-2">
-            <i className="fa-solid fa-envelope"></i> info@ridleypubbbsr.com
+            <i className="fa-solid fa-envelope"></i> mercsphere@gmail.com
           </p>
         </div>
 

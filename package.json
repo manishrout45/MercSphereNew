@@ -8,6 +8,8 @@
     "tw": "tailwindcss -i ./src/index.css -o ./tailwind/output.css --watch"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.2.0",
     "@vitejs/plugin-react": "^4.4.1",
     "aos": "^2.3.4",
     "framer-motion": "^12.26.2",

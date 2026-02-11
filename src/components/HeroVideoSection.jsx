@@ -8,7 +8,7 @@ export default function HeroVideoSection() {
       {/* Image instead of Video */}
       <div className="relative w-full h-[300px] sm:h-[420px] md:h-[550px] bg-black">
         <img
-          src="/assets/images/PromoHeroSection3.png"
+          src="https://img.freepik.com/premium-vector/business-team-work-meeting_109722-2843.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_wordcount_boost&w=740&q=80"
           alt="Hero Background"
           className="w-full h-full object-cover"
         />

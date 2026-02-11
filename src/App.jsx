@@ -12,8 +12,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
-import Gallery from "./pages/Gallery";
+import Career from "./pages/Career";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import WebDevelopment from "./pages/WebDevelopment";
 
 // Component imports (for internal use in pages)
 import AboutSection from "./components/AboutSection";
@@ -42,8 +43,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/career" element={<Career />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/webdevelopment" element={<WebDevelopment />} />
 
       </Routes>
 

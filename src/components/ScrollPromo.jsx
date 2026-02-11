@@ -78,9 +78,9 @@ const ScrollPromo = () => {
           className="space-y-4 sm:space-y-6 transition-transform duration-100"
         >
           <h2 className="text-white text-3xl sm:text-5xl font-bold leading-tight">
-  BUILDING <span className="text-yellow-400">DIGITAL</span>
+  BUILDING <span className="text-yellow-400 drop-shadow-[0_0_12px_rgba(250,204,21,0.8)]">DIGITAL</span>
   <span className="block">
-    <span className="text-yellow-400">SOLUTIONS</span> THAT SCALE
+    <span className="text-yellow-400 drop-shadow-[0_0_12px_rgba(250,204,21,0.8)]">SOLUTIONS</span> THAT SCALE
   </span>
 </h2>
 
