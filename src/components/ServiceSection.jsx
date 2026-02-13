@@ -7,6 +7,9 @@ import {
   faMagnifyingGlassChart,
   faBullhorn,
   faShareNodes,
+  faMobileScreen,
+  faVideo,
+  faMapLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function ServiceSection() {
@@ -21,14 +24,14 @@ export default function ServiceSection() {
     {
       title: "Graphic Designing",
       desc:
-        "Merc Sphere offers the best SMO strategies that integrate seamlessly to give your brand a competitive edge.",
+        "Merc Sphere offers creative graphic solutions that strengthen your brand identity and visual presence.",
       icon: faPalette,
       path: "/graphicdesigning",
     },
     {
       title: "UI/UX",
       desc:
-        "Our professionals design websites that reflect your brand, increase your credibility, and help you stand out digitally.",
+        "Our professionals design intuitive user experiences that enhance engagement and improve conversions.",
       icon: faPenRuler,
       path: "/uiux",
     },
@@ -37,7 +40,7 @@ export default function ServiceSection() {
       desc:
         "Our team utilizes proven search engine optimization strategies to drive organic traffic and increase conversions.",
       icon: faMagnifyingGlassChart,
-      path: "/seoservices",
+      path: "/seo",
     },
     {
       title: "Digital Marketing",
@@ -49,9 +52,30 @@ export default function ServiceSection() {
     {
       title: "SMM Services",
       desc:
-        "Our specialists harness the might of social media to promote your business and drive meaningful results.",
+        "Our specialists harness the power of social media to promote your business and drive meaningful results.",
       icon: faShareNodes,
-      path: "/smmservices",
+      path: "/smm",
+    },
+    {
+      title: "App Development",
+      desc:
+        "We build high-performance Android and iOS applications tailored to your business goals and user needs.",
+      icon: faMobileScreen,
+      path: "/appdevelopment",
+    },
+    {
+      title: "Video Making",
+      desc:
+        "From promotional videos to brand storytelling, we create engaging visual content that captures attention.",
+      icon: faVideo,
+      path: "/videomaking",
+    },
+    {
+      title: "GMB Setup",
+      desc:
+        "Optimize your Google My Business profile to increase local visibility, attract customers, and boost credibility.",
+      icon: faMapLocationDot,
+      path: "/gmbsetup",
     },
   ];
 
@@ -93,15 +117,16 @@ export default function ServiceSection() {
                 transition-all duration-500 ease-out
                 hover:scale-105 hover:text-white
                 hover:bg-gradient-to-br from-indigo-600 via-blue-700 to-slate-900
+                flex flex-col
               "
             >
               {/* DOT PATTERN */}
               <div
                 className="
-                absolute inset-0 opacity-0 group-hover:opacity-20
-                bg-[radial-gradient(#ffffff_1px,transparent_1px)]
-                [background-size:18px_18px] transition duration-500
-              "
+                  absolute inset-0 opacity-0 group-hover:opacity-20
+                  bg-[radial-gradient(#ffffff_1px,transparent_1px)]
+                  [background-size:18px_18px] transition duration-500
+                "
               ></div>
 
               {/* ICON */}
@@ -122,16 +147,28 @@ export default function ServiceSection() {
                 {service.desc}
               </p>
 
-              {/* READ MORE */}
-              <Link
-                to={service.path}
-                className="
-                  relative inline-block px-5 py-2 text-sm rounded-full font-medium
-                  transition bg-yellow-400 text-white hover:bg-yellow-500
-                "
-              >
-                Read more
-              </Link>
+              {/* BUTTONS */}
+              <div className="mt-auto flex justify-center gap-3">
+                <Link
+                  to={service.path}
+                  className="
+                    relative inline-block px-5 py-2 text-sm rounded-full font-medium
+                    transition bg-yellow-400 text-white hover:bg-yellow-500
+                  "
+                >
+                  Read more
+                </Link>
+
+                <Link
+                  to="/plans"
+                  className="
+                    relative inline-block px-5 py-2 text-sm rounded-full font-medium
+                    transition bg-white text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white
+                  "
+                >
+                  View Plan
+                </Link>
+              </div>
             </div>
           ))}
         </div>

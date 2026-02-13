@@ -15,6 +15,14 @@ import Services from "./pages/Services";
 import Career from "./pages/Career";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import WebDevelopment from "./pages/WebDevelopment";
+import GraphicDesigning from "./pages/GraphicDesigning";
+import UIUX from "./pages/UIUX";
+import DigitalMarketing from "./pages/DigitalMarketing";
+import SEO from "./pages/SEO";
+import AppDevelopment from "./pages/AppDevelopment";
+import SMM from "./pages/SMM";
+import VideoMaking from "./pages/VideoMaking";
+import GMBSetup from "./pages/GMBSetup";
 
 // Component imports (for internal use in pages)
 import AboutSection from "./components/AboutSection";
@@ -46,6 +54,14 @@ function App() {
         <Route path="/career" element={<Career />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/webdevelopment" element={<WebDevelopment />} />
+        <Route path="/graphicdesigning" element={<GraphicDesigning />} />
+        <Route path="/uiux" element={<UIUX />} />
+        <Route path="/appdevelopment" element={<AppDevelopment />} />
+        <Route path="/seo" element={<SEO />} />
+        <Route path="/digitalmarketing" element={<DigitalMarketing />} />
+        <Route path="/smm" element={<SMM />} />
+        <Route path="/videomaking" element={<VideoMaking />} />
+        <Route path="/gmbsetup" element={<GMBSetup />} />
 
       </Routes>
 

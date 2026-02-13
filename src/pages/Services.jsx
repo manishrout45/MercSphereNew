@@ -27,24 +27,42 @@ const Services = () => {
 
 
       {/* Full Width Image Section */}
-      <section className="w-full bg-gray-50">
-        <div
-          className="
-            w-full
-            h-screen              /* Mobile: full screen height */
-            sm:h-[400px]
-            md:h-[500px]
-            lg:h-[600px]
-            bg-contain            /* Mobile: show full image */
-            sm:bg-cover           /* Desktop: cover nicely */
-            bg-center
-            bg-no-repeat
-          "
-          style={{
-            backgroundImage: "url('/assets/images/ProcessWeFollow.png')",
-          }}
-        ></div>
-      </section>
+<section className="w-full bg-gray-50">
+
+  {/* ✅ Mobile Image */}
+  <div
+    className="
+      block sm:hidden
+      w-full
+      h-screen
+      bg-contain
+      bg-center
+      bg-no-repeat
+    "
+    style={{
+      backgroundImage: "url('/assets/images/ProcessWeFollowMobile.png')",
+    }}
+  ></div>
+
+  {/* ✅ Tablet & Desktop Image */}
+  <div
+    className="
+      hidden sm:block
+      w-full
+      sm:h-[400px]
+      md:h-[500px]
+      lg:h-[600px]
+      bg-cover
+      bg-center
+      bg-no-repeat
+    "
+    style={{
+      backgroundImage: "url('/assets/images/ProcessWeFollow.png')",
+    }}
+  ></div>
+
+</section>
+
       <ServicesSection />
       <FAQSection />
     </>

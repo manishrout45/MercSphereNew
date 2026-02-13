@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import {
   FiCode,
   FiLayout,
@@ -11,7 +12,7 @@ import {
   FiSettings,
   FiSend,
 } from "react-icons/fi";
-import PricingSection from "../components/PricingSection";
+import WebDevPricing from "../components/WebDevPricing";
 
 export default function WebDevelopment() {
   return (
@@ -36,6 +37,69 @@ export default function WebDevelopment() {
           </p>
         </div>
       </section>
+      <section className="relative bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 py-20 grid lg:grid-cols-2 gap-12 items-center">
+        
+        {/* LEFT CONTENT */}
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
+            Best Web Design Services
+          </h1>
+
+          <p className="text-gray-600 text-lg leading-relaxed mb-10">
+            We specialize in creating stunning websites that captivate your audience
+            and drive business growth. Contact us now for a website that reflects
+            your brand, increases your credibility, and helps you stand out digitally.
+          </p>
+
+          {/* SUB HEADING */}
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-8">
+            Choose Us for Countless Benefits That Will Exceed Your Expectations
+          </h2>
+
+          {/* BULLET POINTS */}
+          <div className="grid sm:grid-cols-2 gap-y-6 gap-x-10 mb-12">
+            {[
+              "User-Friendly UX and UIs",
+              "Experts’ Assistance",
+              "Pocket-Friendly Services",
+              "24×7 Customer Support",
+            ].map((item, index) => (
+              <div key={index} className="flex items-center gap-4">
+                <div className="w-4 h-4 bg-blue-600 rounded-full"></div>
+                <p className="text-gray-600 text-lg">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* BUTTONS */}
+          <div className="flex flex-wrap gap-6">
+            <Link
+              to="/contact"
+              className="px-8 py-4 rounded-full bg-black text-white font-semibold tracking-wide hover:bg-gray-800 transition"
+            >
+              ENQUIRY
+            </Link>
+
+            <Link
+              to="/pricing"
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold tracking-wide hover:opacity-90 transition"
+            >
+              PRICING PLANS
+            </Link>
+          </div>
+        </div>
+
+        {/* RIGHT IMAGE */}
+        <div className="relative flex justify-center">
+          <img
+            src="https://img.freepik.com/free-vector/web-design-work-process_1284-34411.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_user_personalization&w=740&q=80"  // Replace with your image
+            alt="Web Design Services"
+            className="w-full max-w-xl object-contain"
+          />
+        </div>
+      </div>
+    </section>
 
       {/* ================= SERVICES SECTION ================= */}
       <section className="py-20 bg-white">
@@ -93,7 +157,6 @@ export default function WebDevelopment() {
           </h2>
 
           <div className="relative">
-            {/* 🌊 Animated Wave */}
             <svg
               className="hidden md:block absolute top-24 left-0 w-full"
               viewBox="0 0 1200 200"
@@ -116,7 +179,6 @@ export default function WebDevelopment() {
               />
             </svg>
 
-            {/* STEPS */}
             <div className="grid md:grid-cols-4 gap-12 relative z-10">
               <WaveStep number="01" icon={<FiSearch />} title="Requirement Analysis" delay="0s" />
               <WaveStep number="02" icon={<FiPenTool />} title="UI / UX Design" delay="0.2s" />
@@ -127,7 +189,7 @@ export default function WebDevelopment() {
         </div>
       </section>
 
-      <PricingSection />
+      <WebDevPricing />
 
       {/* ================= CTA ================= */}
       <section className="py-20 bg-white text-blue-700">
@@ -195,17 +257,31 @@ export default function WebDevelopment() {
 /* ================= COMPONENTS ================= */
 
 const ServiceCard = ({ icon, title, desc, bgImage }) => (
-  <div className="group relative h-[340px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+  <div className="group relative h-[340px] rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 cursor-pointer">
+    
     <div
       className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
       style={{ backgroundImage: `url(${bgImage})` }}
     />
-    <div className="absolute inset-0 bg-gradient-to-b from-blue-800/70 to-blue-700/50"></div>
 
-    <div className="relative z-10 p-8 h-full flex flex-col justify-end text-white">
-      <div className="mb-4 text-4xl text-yellow-400">{icon}</div>
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-sm text-blue-100">{desc}</p>
+    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-800/60 to-transparent"></div>
+
+    <div className="absolute bottom-0 left-0 w-full p-6 text-white overflow-hidden">
+      <div className="transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+
+        <div className="text-yellow-400 text-3xl mb-3 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          {icon}
+        </div>
+
+        <h3 className="text-xl font-semibold mb-2">
+          {title}
+        </h3>
+
+        <p className="text-sm text-blue-100 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          {desc}
+        </p>
+
+      </div>
     </div>
   </div>
 );

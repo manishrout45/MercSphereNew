@@ -24,7 +24,7 @@ const Navbar = () => {
     pathname === "/webdevelopment" ||
     pathname === "/graphicdesigning" ||
     pathname === "/digitalmarketing" ||
-    pathname === "/seoservices" ||
+    pathname === "/seo" ||
     pathname === "/appdevelopment";
 
   const navItems = ["home", "about", "Services", "career", "contact"];
@@ -51,7 +51,7 @@ const Navbar = () => {
     {
       name: "SEO Optimization",
       icon: <FaSearch />,
-      link: "/seoservices",
+      link: "/seo",
     },
     {
       name: "App Development",
