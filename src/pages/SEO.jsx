@@ -104,54 +104,7 @@ export default function SEO() {
   </div>
 </section>
 
-      {/* ================= SERVICES SECTION ================= */}
-<section className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-4">
-    <h2 className="text-3xl font-bold text-center mb-12">
-      Our SEO Services
-    </h2>
-
-    <div className="grid md:grid-cols-3 gap-8">
-      <ServiceCard
-        icon={<FiLayout />}
-        title="Keyword Research & Strategy"
-        desc="In-depth keyword research to target high-intent search terms that drive qualified traffic."
-        bgImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-      />
-      <ServiceCard
-        icon={<FiCode />}
-        title="On-Page SEO Optimization"
-        desc="Optimizing meta tags, content structure, internal linking, and technical elements for better rankings."
-        bgImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-      />
-      <ServiceCard
-        icon={<FiSmartphone />}
-        title="Technical SEO"
-        desc="Improving website speed, mobile-friendliness, crawlability, and indexing performance."
-        bgImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-      />
-      <ServiceCard
-        icon={<FiZap />}
-        title="Content Optimization"
-        desc="SEO-focused content strategies that increase visibility and engage your target audience."
-        bgImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40"
-      />
-      <ServiceCard
-        icon={<FiShield />}
-        title="Link Building"
-        desc="High-quality backlink strategies to improve domain authority and search engine trust."
-        bgImage="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
-      />
-      <ServiceCard
-        icon={<FiTrendingUp />}
-        title="Analytics & Reporting"
-        desc="Comprehensive performance tracking and monthly reports to measure SEO growth and ROI."
-        bgImage="https://images.unsplash.com/photo-1556155092-8707de31f9c4"
-      />
-    </div>
-  </div>
-</section>
-
+ 
       {/* ================= PROCESS FLOW SECTION ================= */}
 <section className="py-28 bg-gradient-to-b from-blue-700 to-blue-900 relative overflow-hidden">
   <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -213,6 +166,55 @@ export default function SEO() {
 </section>
 
       <SEOPricing />
+
+           {/* ================= SERVICES SECTION ================= */}
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-12">
+      Our SEO Services
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      <ServiceCard
+        icon={<FiLayout />}
+        title="Keyword Research & Strategy"
+        desc="In-depth keyword research to target high-intent search terms that drive qualified traffic."
+        bgImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+      />
+      <ServiceCard
+        icon={<FiCode />}
+        title="On-Page SEO Optimization"
+        desc="Optimizing meta tags, content structure, internal linking, and technical elements for better rankings."
+        bgImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+      />
+      <ServiceCard
+        icon={<FiSmartphone />}
+        title="Technical SEO"
+        desc="Improving website speed, mobile-friendliness, crawlability, and indexing performance."
+        bgImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+      />
+      <ServiceCard
+        icon={<FiZap />}
+        title="Content Optimization"
+        desc="SEO-focused content strategies that increase visibility and engage your target audience."
+        bgImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40"
+      />
+      <ServiceCard
+        icon={<FiShield />}
+        title="Link Building"
+        desc="High-quality backlink strategies to improve domain authority and search engine trust."
+        bgImage="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
+      />
+      <ServiceCard
+        icon={<FiTrendingUp />}
+        title="Analytics & Reporting"
+        desc="Comprehensive performance tracking and monthly reports to measure SEO growth and ROI."
+        bgImage="https://images.unsplash.com/photo-1556155092-8707de31f9c4"
+      />
+    </div>
+  </div>
+</section>
+
 
       {/* ================= CTA ================= */}
 <section className="py-20 bg-white text-blue-700">

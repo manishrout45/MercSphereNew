@@ -2,10 +2,30 @@ import { useEffect, useRef, useState } from "react";
 
 export default function OurProjects() {
   const projects = [
-    { id: 1, name: "Natural Derma Clinic", url: "https://naturaldermaclinic.com", image: "/assets/projects/ndc.jpg" },
-    { id: 2, name: "Organic Farm Website", url: "https://organicfarm.com", image: "/assets/projects/organic.jpg" },
-    { id: 3, name: "IT Service Portfolio", url: "https://itportfolio.com", image: "/assets/projects/it.jpg" },
-    { id: 4, name: "E-Commerce Dashboard", url: "https://ecommerce-demo.com", image: "/assets/projects/ecommerce.jpg" },
+    {
+      id: 1,
+      name: "Trip To Puri",
+      url: "https://triptopuri.com/",
+      image: "/assets/images/TripToPuriImg.png",
+    },
+    {
+      id: 2,
+      name: "Dealinee",
+      url: "https://dealinee.com/",
+      image: "/assets/images/DealineeImg.png",
+    },
+    {
+      id: 3,
+      name: "OnnRoad",
+      url: "https://www.onnroad.com/",
+      image: "/assets/images/OnnroadImg.png",
+    },
+    {
+      id: 4,
+      name: "Apollo Dental",
+      url: "https://apollodental.netlify.app/",
+      image: "/assets/images/ApolloDentalImg.png",
+    },
   ];
 
   const slides = [...projects, ...projects];
@@ -43,7 +63,7 @@ export default function OurProjects() {
     if (intervalRef.current) clearInterval(intervalRef.current);
   };
 
-  /* SEAMLESS RESET (BOTH DIRECTIONS) */
+  /* SEAMLESS RESET */
   useEffect(() => {
     if (current === total) {
       setTimeout(() => {
@@ -96,7 +116,9 @@ export default function OurProjects() {
           onMouseLeave={startAutoSlide}
         >
           <div
-            className={`flex gap-x-4 ${enableTransition ? "transition-transform duration-700 ease-in-out" : ""}`}
+            className={`flex gap-x-4 ${
+              enableTransition ? "transition-transform duration-700 ease-in-out" : ""
+            }`}
             style={{
               transform: `translateX(-${(100 / cardsPerView) * current}%)`,
             }}

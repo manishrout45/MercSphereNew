@@ -6,6 +6,9 @@ import {
   FaBullhorn,
   FaSearch,
   FaMobileAlt,
+  FaPenNib,
+  FaVideo,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 
 const Navbar = () => {
@@ -19,45 +22,34 @@ const Navbar = () => {
 
   const pathname = location.pathname;
   const path = pathname === "/" ? "home" : pathname.slice(1);
+
   const isServicesActive =
     pathname === "/services" ||
     pathname === "/webdevelopment" ||
     pathname === "/graphicdesigning" ||
     pathname === "/digitalmarketing" ||
     pathname === "/seo" ||
-    pathname === "/appdevelopment";
+    pathname === "/appdevelopment" ||
+    pathname === "/uiux" ||
+    pathname === "/smm" ||
+    pathname === "/videomaking" ||
+    pathname === "/gmbsetup";
 
   const navItems = ["home", "about", "Services", "career", "contact"];
 
   /* ===============================
-     SERVICES DROPDOWN LIST
+     SERVICES DROPDOWN LIST (9)
   =============================== */
   const servicesList = [
-    {
-      name: "Web Development",
-      icon: <FaLaptopCode />,
-      link: "/webdevelopment",
-    },
-    {
-      name: "Graphic Designing",
-      icon: <FaPaintBrush />,
-      link: "/graphicdesigning",
-    },
-    {
-      name: "Digital Marketing",
-      icon: <FaBullhorn />,
-      link: "/digitalmarketing",
-    },
-    {
-      name: "SEO Optimization",
-      icon: <FaSearch />,
-      link: "/seo",
-    },
-    {
-      name: "App Development",
-      icon: <FaMobileAlt />,
-      link: "/appdevelopment",
-    },
+    { name: "Website Development", icon: <FaLaptopCode />, link: "/webdevelopment" },
+    { name: "Graphic Designing", icon: <FaPaintBrush />, link: "/graphicdesigning" },
+    { name: "UI/UX Design", icon: <FaPenNib />, link: "/uiux" },
+    { name: "SEO Services", icon: <FaSearch />, link: "/seo" },
+    { name: "Digital Marketing", icon: <FaBullhorn />, link: "/digitalmarketing" },
+    { name: "SMM Services", icon: <FaBullhorn />, link: "/smm" },
+    { name: "App Development", icon: <FaMobileAlt />, link: "/appdevelopment" },
+    { name: "Video Making", icon: <FaVideo />, link: "/videomaking" },
+    { name: "GMB Setup", icon: <FaMapMarkerAlt />, link: "/gmbsetup" },
   ];
 
   /* ===============================
@@ -85,7 +77,7 @@ const Navbar = () => {
   }, [pathname]);
 
   /* ===============================
-     CLICK OUTSIDE CLOSE (SERVICES)
+     CLICK OUTSIDE CLOSE
   =============================== */
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -97,9 +89,6 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  /* ===============================
-     HOVER TOLERANCE
-  =============================== */
   const handleMouseEnter = () => {
     clearTimeout(closeTimer.current);
     setServicesOpen(true);
@@ -177,7 +166,7 @@ const Navbar = () => {
                 <div
                   key="services"
                   ref={servicesRef}
-                  className="relative"
+                  className="relative static"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -196,17 +185,22 @@ const Navbar = () => {
                     )}
                   </Link>
 
-                  {/* Dropdown */}
-                  <div
-                    className={`absolute top-full mt-4 w-72 bg-[#0b1324] rounded-xl shadow-xl border border-white/10 p-4 grid gap-3
-                    transition-all duration-300 origin-top
-                    ${
-                      servicesOpen
-                        ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-                        : "opacity-0 translate-y-2 scale-95 pointer-events-none"
-                    }
-                    right-0 lg:left-0 lg:right-auto`}
-                  >
+                  {/* ====== 3x3 MEGA DROPDOWN ====== */}
+<div
+  className={`absolute top-full mt-4 
+  left-1/2 -translate-x-[72%]
+  w-[700px] max-w-7xl
+  bg-[#0b1324] rounded-xl shadow-xl border border-white/10 p-8
+  grid grid-cols-3 gap-4
+  transition-all duration-300 origin-top
+  ${
+    servicesOpen
+      ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+      : "opacity-0 translate-y-2 scale-95 pointer-events-none"
+  }`}
+>
+
+
                     {servicesList.map((service) => (
                       <Link
                         key={service.name}

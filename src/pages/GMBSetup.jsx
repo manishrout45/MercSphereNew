@@ -105,54 +105,7 @@ export default function GMBSetup() {
   </div>
 </section>
 
-      {/* ================= SERVICES SECTION ================= */}
-<section className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-4">
-    <h2 className="text-3xl font-bold text-center mb-12">
-      Our GMB Setup Services
-    </h2>
-
-    <div className="grid md:grid-cols-3 gap-8">
-      <ServiceCard
-        icon={<FiLayout />}
-        title="GMB Profile Creation"
-        desc="Complete setup of your Google My Business profile including business info, images, and categories."
-        bgImage="https://images.unsplash.com/photo-1601597115944-41f48a1d69cb"
-      />
-      <ServiceCard
-        icon={<FiCode />}
-        title="Profile Optimization"
-        desc="Optimize your GMB listing with targeted keywords, services, and description for higher visibility."
-        bgImage="https://images.unsplash.com/photo-1581091215366-1b0f0e25e0a6"
-      />
-      <ServiceCard
-        icon={<FiSmartphone />}
-        title="Google Maps Integration"
-        desc="Ensure your business appears accurately on Google Maps for better local search discovery."
-        bgImage="https://images.unsplash.com/photo-1565372914791-59d2c6f2d2fa"
-      />
-      <ServiceCard
-        icon={<FiZap />}
-        title="Local SEO Enhancement"
-        desc="Boost your local search rankings with optimized GMB features like posts, Q&A, and reviews."
-        bgImage="https://images.unsplash.com/photo-1581091012184-f53a5bdbb7fa"
-      />
-      <ServiceCard
-        icon={<FiShield />}
-        title="Profile Verification & Management"
-        desc="Verify your GMB listing and maintain it with updates, images, and accurate information."
-        bgImage="https://images.unsplash.com/photo-1590608897129-79ef1a1b32e0"
-      />
-      <ServiceCard
-        icon={<FiTrendingUp />}
-        title="Insights & Reporting"
-        desc="Get actionable insights on customer actions, profile performance, and engagement metrics."
-        bgImage="https://images.unsplash.com/photo-1581091012183-0b2cbd1bcb7f"
-      />
-    </div>
-  </div>
-</section>
-
+ 
 
       {/* ================= PROCESS FLOW SECTION ================= */}
 <section className="py-28 bg-gradient-to-b from-blue-700 to-blue-900 relative overflow-hidden">
@@ -216,6 +169,55 @@ export default function GMBSetup() {
 
 
       <GMBPricing />
+
+           {/* ================= SERVICES SECTION ================= */}
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-12">
+      Our GMB Setup Services
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      <ServiceCard
+        icon={<FiLayout />}
+        title="GMB Profile Creation"
+        desc="Complete setup of your Google My Business profile including business info, images, and categories."
+        bgImage="https://images.unsplash.com/photo-1601597115944-41f48a1d69cb"
+      />
+      <ServiceCard
+        icon={<FiCode />}
+        title="Profile Optimization"
+        desc="Optimize your GMB listing with targeted keywords, services, and description for higher visibility."
+        bgImage="https://images.unsplash.com/photo-1581091215366-1b0f0e25e0a6"
+      />
+      <ServiceCard
+        icon={<FiSmartphone />}
+        title="Google Maps Integration"
+        desc="Ensure your business appears accurately on Google Maps for better local search discovery."
+        bgImage="https://images.unsplash.com/photo-1565372914791-59d2c6f2d2fa"
+      />
+      <ServiceCard
+        icon={<FiZap />}
+        title="Local SEO Enhancement"
+        desc="Boost your local search rankings with optimized GMB features like posts, Q&A, and reviews."
+        bgImage="https://images.unsplash.com/photo-1581091012184-f53a5bdbb7fa"
+      />
+      <ServiceCard
+        icon={<FiShield />}
+        title="Profile Verification & Management"
+        desc="Verify your GMB listing and maintain it with updates, images, and accurate information."
+        bgImage="https://images.unsplash.com/photo-1590608897129-79ef1a1b32e0"
+      />
+      <ServiceCard
+        icon={<FiTrendingUp />}
+        title="Insights & Reporting"
+        desc="Get actionable insights on customer actions, profile performance, and engagement metrics."
+        bgImage="https://images.unsplash.com/photo-1581091012183-0b2cbd1bcb7f"
+      />
+    </div>
+  </div>
+</section>
+
 
       {/* ================= CTA ================= */}
 <section className="py-20 bg-white text-blue-700">

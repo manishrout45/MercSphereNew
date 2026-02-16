@@ -102,55 +102,6 @@ export default function GraphicDesigning() {
 </section>
 
 
-      {/* ================= SERVICES SECTION ================= */}
-<section className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-4">
-    <h2 className="text-3xl font-bold text-center mb-12">
-      Our Graphic Design Services
-    </h2>
-
-    <div className="grid md:grid-cols-3 gap-8">
-      <ServiceCard
-        icon={<FiLayout />}
-        title="Logo & Branding Design"
-        desc="Create unique logos and complete branding materials that represent your business identity."
-        bgImage="https://img.freepik.com/free-vector/creative-logo-design-concept_23-2148390372.jpg?w=740&t=st=1696116247~exp=1696116847~hmac=1bb16b12e4f34ee4f57b7cdbd7e39efdbcc91d40ad0bbf0b3ee5f77e9d8f3ee0"
-      />
-      <ServiceCard
-        icon={<FiCode />}
-        title="Marketing & Print Design"
-        desc="Designs for brochures, flyers, posters, and other promotional materials to engage your audience."
-        bgImage="https://img.freepik.com/free-vector/modern-poster-design-template_52683-29035.jpg?w=740&t=st=1696116312~exp=1696116912~hmac=74fef2c6d4739ecaf92e5b58e15f3f0410f9c33d595f5032a95d90c55673d1f5"
-      />
-      <ServiceCard
-        icon={<FiSmartphone />}
-        title="Social Media Graphics"
-        desc="Custom graphics tailored for social media platforms to boost engagement and brand visibility."
-        bgImage="https://img.freepik.com/free-vector/social-media-banner-design-template_53876-137612.jpg?w=740&t=st=1696116365~exp=1696116965~hmac=15c57e50efc73f02ab4f4c756bfc27ef2e18c3057e7d5032fdaac7e7b4930c55"
-      />
-      <ServiceCard
-        icon={<FiZap />}
-        title="Infographic & Data Visualization"
-        desc="Transform complex data into visually appealing and easy-to-understand infographics."
-        bgImage="https://img.freepik.com/free-vector/infographic-template-with-step-options_23-2148893407.jpg?w=740&t=st=1696116412~exp=1696117012~hmac=6a1f9ee02f4b5ebf97c6ed45e7a91bc6fbc7f273f5f9b1b51f23a1b82c36ab6f"
-      />
-      <ServiceCard
-        icon={<FiShield />}
-        title="UI & UX Design"
-        desc="User-centered designs for websites and apps that are both intuitive and visually appealing."
-        bgImage="https://img.freepik.com/free-vector/ui-ux-design-concept-illustration_114360-6521.jpg?w=740&t=st=1696116471~exp=1696117071~hmac=342a0e2eb43c1de9a72da9d3dfb64d2b9e650dfb8496f0a5d1d52efef25a3e42"
-      />
-      <ServiceCard
-        icon={<FiTrendingUp />}
-        title="Packaging & Product Design"
-        desc="Innovative product packaging and labels that attract customers and strengthen brand image."
-        bgImage="https://img.freepik.com/free-vector/product-packaging-design-template_53876-137442.jpg?w=740&t=st=1696116518~exp=1696117118~hmac=faef1f4a6d2f5bc6aa9c3c37b1c08f5b038e24c7e6d9a37235f0eb48f1927f5b"
-      />
-    </div>
-  </div>
-</section>
-
-
       {/* ================= PROCESS FLOW SECTION ================= */}
 <section className="py-28 bg-gradient-to-b from-blue-700 to-blue-900 relative overflow-hidden">
   <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -213,6 +164,54 @@ export default function GraphicDesigning() {
 
 
       <GraphicPricing />
+
+            {/* ================= SERVICES SECTION ================= */}
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-12">
+      Our Graphic Design Services
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      <ServiceCard
+        icon={<FiLayout />}
+        title="Logo & Branding Design"
+        desc="Create unique logos and complete branding materials that represent your business identity."
+        bgImage="https://img.freepik.com/free-vector/creative-logo-design-concept_23-2148390372.jpg?w=740&t=st=1696116247~exp=1696116847~hmac=1bb16b12e4f34ee4f57b7cdbd7e39efdbcc91d40ad0bbf0b3ee5f77e9d8f3ee0"
+      />
+      <ServiceCard
+        icon={<FiCode />}
+        title="Marketing & Print Design"
+        desc="Designs for brochures, flyers, posters, and other promotional materials to engage your audience."
+        bgImage="https://img.freepik.com/free-vector/modern-poster-design-template_52683-29035.jpg?w=740&t=st=1696116312~exp=1696116912~hmac=74fef2c6d4739ecaf92e5b58e15f3f0410f9c33d595f5032a95d90c55673d1f5"
+      />
+      <ServiceCard
+        icon={<FiSmartphone />}
+        title="Social Media Graphics"
+        desc="Custom graphics tailored for social media platforms to boost engagement and brand visibility."
+        bgImage="https://img.freepik.com/free-vector/social-media-banner-design-template_53876-137612.jpg?w=740&t=st=1696116365~exp=1696116965~hmac=15c57e50efc73f02ab4f4c756bfc27ef2e18c3057e7d5032fdaac7e7b4930c55"
+      />
+      <ServiceCard
+        icon={<FiZap />}
+        title="Infographic & Data Visualization"
+        desc="Transform complex data into visually appealing and easy-to-understand infographics."
+        bgImage="https://img.freepik.com/free-vector/infographic-template-with-step-options_23-2148893407.jpg?w=740&t=st=1696116412~exp=1696117012~hmac=6a1f9ee02f4b5ebf97c6ed45e7a91bc6fbc7f273f5f9b1b51f23a1b82c36ab6f"
+      />
+      <ServiceCard
+        icon={<FiShield />}
+        title="UI & UX Design"
+        desc="User-centered designs for websites and apps that are both intuitive and visually appealing."
+        bgImage="https://img.freepik.com/free-vector/ui-ux-design-concept-illustration_114360-6521.jpg?w=740&t=st=1696116471~exp=1696117071~hmac=342a0e2eb43c1de9a72da9d3dfb64d2b9e650dfb8496f0a5d1d52efef25a3e42"
+      />
+      <ServiceCard
+        icon={<FiTrendingUp />}
+        title="Packaging & Product Design"
+        desc="Innovative product packaging and labels that attract customers and strengthen brand image."
+        bgImage="https://img.freepik.com/free-vector/product-packaging-design-template_53876-137442.jpg?w=740&t=st=1696116518~exp=1696117118~hmac=faef1f4a6d2f5bc6aa9c3c37b1c08f5b038e24c7e6d9a37235f0eb48f1927f5b"
+      />
+    </div>
+  </div>
+</section>
 
       {/* ================= CTA ================= */}
 <section className="py-20 bg-white text-blue-700">

@@ -101,6 +101,50 @@ export default function WebDevelopment() {
       </div>
     </section>
 
+      
+
+      {/* ================= PROCESS FLOW SECTION ================= */}
+      <section className="py-28 bg-gradient-to-b from-blue-700 to-blue-900 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-20">
+            Our Development Process
+          </h2>
+
+          <div className="relative">
+            <svg
+              className="hidden md:block absolute top-24 left-0 w-full"
+              viewBox="0 0 1200 200"
+              fill="none"
+            >
+              <defs>
+                <linearGradient id="waveGradient" x1="0" y1="0" x2="1200" y2="0">
+                  <stop offset="0%" stopColor="#facc15" />
+                  <stop offset="50%" stopColor="#ffffff" />
+                  <stop offset="100%" stopColor="#facc15" />
+                </linearGradient>
+              </defs>
+
+              <path
+                d="M0,100 C200,0 400,200 600,100 C800,0 1000,200 1200,100"
+                stroke="url(#waveGradient)"
+                strokeWidth="4"
+                fill="transparent"
+                className="wave-line"
+              />
+            </svg>
+
+            <div className="grid md:grid-cols-4 gap-12 relative z-10">
+              <WaveStep number="01" icon={<FiSearch />} title="Requirement Analysis" delay="0s" />
+              <WaveStep number="02" icon={<FiPenTool />} title="UI / UX Design" delay="0.2s" />
+              <WaveStep number="03" icon={<FiSettings />} title="Development & Testing" delay="0.4s" />
+              <WaveStep number="04" icon={<FiSend />} title="Launch & Support" delay="0.6s" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <WebDevPricing />
+
       {/* ================= SERVICES SECTION ================= */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
@@ -148,48 +192,6 @@ export default function WebDevelopment() {
           </div>
         </div>
       </section>
-
-      {/* ================= PROCESS FLOW SECTION ================= */}
-      <section className="py-28 bg-gradient-to-b from-blue-700 to-blue-900 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-20">
-            Our Development Process
-          </h2>
-
-          <div className="relative">
-            <svg
-              className="hidden md:block absolute top-24 left-0 w-full"
-              viewBox="0 0 1200 200"
-              fill="none"
-            >
-              <defs>
-                <linearGradient id="waveGradient" x1="0" y1="0" x2="1200" y2="0">
-                  <stop offset="0%" stopColor="#facc15" />
-                  <stop offset="50%" stopColor="#ffffff" />
-                  <stop offset="100%" stopColor="#facc15" />
-                </linearGradient>
-              </defs>
-
-              <path
-                d="M0,100 C200,0 400,200 600,100 C800,0 1000,200 1200,100"
-                stroke="url(#waveGradient)"
-                strokeWidth="4"
-                fill="transparent"
-                className="wave-line"
-              />
-            </svg>
-
-            <div className="grid md:grid-cols-4 gap-12 relative z-10">
-              <WaveStep number="01" icon={<FiSearch />} title="Requirement Analysis" delay="0s" />
-              <WaveStep number="02" icon={<FiPenTool />} title="UI / UX Design" delay="0.2s" />
-              <WaveStep number="03" icon={<FiSettings />} title="Development & Testing" delay="0.4s" />
-              <WaveStep number="04" icon={<FiSend />} title="Launch & Support" delay="0.6s" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <WebDevPricing />
 
       {/* ================= CTA ================= */}
       <section className="py-20 bg-white text-blue-700">
