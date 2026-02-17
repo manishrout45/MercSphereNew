@@ -25,18 +25,8 @@ export default function Lanyard({
   fov = 20,
   transparent = true
 }) {
-  const [isMobile, setIsMobile] = useState(
-    () => typeof window !== 'undefined' && window.innerWidth < 768
-  );
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
-    <section className="w-full 
+    <section className=" w-full
                     md:min-h-screen 
                     lg:min-h-[650px] 
                     bg-white 
@@ -44,7 +34,6 @@ export default function Lanyard({
                     items-center">
 
       <div className="max-w-7xl mx-auto px-4 w-full grid md:grid-cols-2 gap items-center">
-
 
         {/* ================= LEFT SIDE TEXT ================= */}
         <div className="space-y-6 text-center md:text-left">
@@ -86,20 +75,21 @@ export default function Lanyard({
           </button>
         </div>
 
-
         {/* ================= RIGHT SIDE 3D ================= */}
         <div className="relative w-full h-[500px] md:h-[600px]">
           <Canvas
             camera={{ position: position, fov: fov }}
-            dpr={[1, isMobile ? 1.5 : 2]}
+            dpr={[1, 2]} // Same DPR for all devices
             gl={{ alpha: transparent }}
             onCreated={({ gl }) =>
               gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)
             }
           >
             <ambientLight intensity={Math.PI} />
-            <Physics gravity={gravity} timeStep={isMobile ? 1 / 30 : 1 / 60}>
-              <Band isMobile={isMobile} />
+
+            {/* Same physics for all devices */}
+            <Physics gravity={gravity} timeStep={1 / 60}>
+              <Band />
             </Physics>
 
             <Environment blur={0.75}>
@@ -115,7 +105,7 @@ export default function Lanyard({
   );
 }
 
-function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
+function Band({ maxSpeed = 50, minSpeed = 0 }) {
   const band = useRef(),
     fixed = useRef(),
     j1 = useRef(),
@@ -198,9 +188,8 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
       curve.points[2].copy(j1.current.lerped);
       curve.points[3].copy(fixed.current.translation());
 
-      band.current.geometry.setPoints(
-        curve.getPoints(isMobile ? 16 : 32)
-      );
+      // Same smoothness for all devices
+      band.current.geometry.setPoints(curve.getPoints(32));
 
       ang.copy(card.current.angvel());
       rot.copy(card.current.rotation());
@@ -255,7 +244,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
               <meshPhysicalMaterial
                 map={materials.base.map}
                 map-anisotropy={16}
-                clearcoat={isMobile ? 0 : 1}
+                clearcoat={1}
                 clearcoatRoughness={0.15}
                 roughness={0.9}
                 metalness={0.8}
@@ -272,7 +261,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
         <meshLineMaterial
           color="white"
           depthTest={false}
-          resolution={isMobile ? [1000, 2000] : [1000, 1000]}
+          resolution={[1000, 1000]}
           useMap
           map={texture}
           repeat={[-4, 1]}

@@ -7,223 +7,130 @@ export default function Career() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="relative bg-gradient-to-br from-[#1e3c8a] via-[#1d4ed8] to-[#2563eb] text-white overflow-hidden">
+     {/* ================= HERO SECTION ================= */}
+<section
+  className="w-full text-white pt-32 pb-20 bg-cover bg-center relative"
+  style={{
+    backgroundImage:
+      "url('https://img.freepik.com/premium-vector/dots-lines-technology-glowing-abstract-blue-background_936042-592.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_hybrid&w=740&q=80')",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/80"></div>
 
-        {/* ===== Main Hero Content ===== */}
-        <div className="max-w-7xl mx-auto px-6 pt-32 pb-48 flex flex-col lg:flex-row items-center justify-between relative z-10">
-
-          {/* LEFT CONTENT */}
-          <div className="lg:w-1/2 space-y-8">
-
-            <p className="text-sm text-blue-200 font-medium">
-              Welcome To Trident
-            </p>
-
-            <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight">
-              Connecting <br />
-              Talent, Building <br />
-              Careers
-            </h1>
-
-            <p className="text-blue-100 max-w-md">
-              Phasellus luctus, tellus sit amet dignissim tempus, turpis metus
-              tempus enim, non tristique risus diam ut arcu. Praesent suscipit
-              aliquam mauris.
-            </p>
-
-            {/* ===== UPDATED BUTTON SECTION ===== */}
-            <div className="flex items-center pt-6">
-
-              {/* Read More */}
-              <button
-                onMouseEnter={() => setHovered("left")}
-                onMouseLeave={() => setHovered(null)}
-                className="bg-blue-500 hover:bg-blue-600 transition-all duration-300 
-                px-6 py-4 font-semibold 
-                rounded-l-full rounded-r-none"
-              >
-                Read More
-              </button>
-
-              {/* Middle Circle */}
-              <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-xl -mx-3 z-10 transition-all duration-300">
-                <span className="text-black font-bold text-lg transition-all duration-300">
-                  {hovered === "left"
-                    ? "←"
-                    : hovered === "right"
-                    ? "→"
-                    : "↔"}
-                </span>
-              </div>
-
-              {/* Explore More */}
-              <button
-                onMouseEnter={() => setHovered("right")}
-                onMouseLeave={() => setHovered(null)}
-                className="bg-black hover:bg-gray-800 transition-all duration-300 
-                px-6 py-4 font-semibold text-white
-                rounded-r-full rounded-l-none"
-              >
-                Explore More
-              </button>
-
-            </div>
-
-          </div>
-
-          {/* RIGHT SIDE IMAGE AREA */}
-          <div className="lg:w-1/2 relative flex justify-end mt-16 lg:mt-0">
-            <img
-              src="https://img.freepik.com/free-photo/smiley-man-work-holding-laptop-posing_23-2148908835.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_wordcount_boost&w=740&q=80"
-              alt="Hero"
-              className="relative  max-w-md lg:max-w-lg rounded-3xl"
-            />
-
-            <div className="absolute z-10 -top-6 left-16 flex -space-x-3">
-              <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_wordcount_boost&w=740&q=80" className="w-10 h-10 rounded-full border-2 border-white" />
-              <img src="https://img.freepik.com/premium-photo/brunette-young-girl-with-red-jersey_58409-19495.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_wordcount_boost&w=740&q=80" className="w-10 h-10 rounded-full border-2 border-white" />
-              <img src="https://img.freepik.com/free-photo/portrait-handsome-attractive-stylish-bearded-man-brown_285396-4617.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_wordcount_boost&w=740&q=80" className="w-10 h-10 rounded-full border-2 border-white" />
-              <img src="https://img.freepik.com/free-photo/portrait-pretty-girl-with-bun-denim-jacket-white-t-shirt-with-gentle-smile-pink_176532-13857.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_wordcount_boost&w=740&q=80" className="w-10 h-10 rounded-full border-2 border-white" />
-            </div>
-
-            <div className="absolute top-44 right-4 bg-blue-600 p-4 rounded-lg shadow-xl w-44">
-              <p className="text-sm font-semibold mb-2">Recruiting</p>
-              <div className="h-16 bg-blue-500 rounded-md"></div>
-            </div>
-
-            
-          </div>
-        </div>
-
-        {/* Floating Bottom Cards */}
-        <div className="absolute left-0 w-full -mt-32 z-20">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="flex flex-col md:flex-row gap-6 justify-center">
-
-              <div className="relative bg-yellow-500 text-white p-10 w-full md:w-1/3 rounded-md shadow-2xl text-center">
-                <h3 className="text-xl font-semibold mb-3">Expert Agent</h3>
-                <p className="text-blue-100 text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2">
-                  <div className="bg-[#1e3c8a] w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
-                    ↓
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative bg-yellow-400 text-white p-10 w-full md:w-1/3 rounded-md shadow-2xl text-center">
-                <h3 className="text-xl font-semibold mb-3">Quality Standard</h3>
-                <p className="text-blue-100 text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2">
-                  <div className="bg-[#1e3c8a] w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
-                    ↓
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative bg-yellow-500 text-white p-10 w-full md:w-1/3 rounded-md shadow-2xl text-center">
-                <h3 className="text-xl font-semibold mb-3">Certified Method</h3>
-                <p className="text-blue-100 text-sm">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                </p>
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2">
-                  <div className="bg-[#1e3c8a] w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
-                    ↓
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white h-48"></div>
-      </section>
+  <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
+    <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      Build Your Career With Merc Sphere
+    </h1>
+    <p className="max-w-3xl mx-auto text-lg text-blue-100">
+      Join a team of innovators, creators, and problem-solvers passionate about
+      building cutting-edge digital solutions. At Merc Sphere, we empower talent,
+      encourage creativity, and provide opportunities to grow, learn, and make
+      a real impact in the tech industry.
+    </p>
+  </div>
+</section>
 
 
-      <section className="bg-[#ffffff] py-16 px-6 lg:px-20">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+  <section className="bg-[#ffffff] py-12 sm:py-16 px-4 sm:px-6 lg:px-20">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+    
+    {/* ================= LEFT SIDE ================= */}
+    <div className="relative">
+      <div className="relative bg-gray-200 rounded-3xl sm:rounded-[40px] overflow-hidden">
+        <img
+          src="https://img.freepik.com/free-photo/man-working-night_1098-12798.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_wordcount_boost&w=740&q=80"
+          alt="Career Programme"
+          className="w-full h-[300px] sm:h-[400px] lg:h-full object-cover"
+        />
+      </div>
+
+      {/* Badge */}
+      <div className="absolute top-4 right-4 sm:top-6 sm:right-6 bg-blue-600 text-white px-4 sm:px-5 py-2 rounded-md shadow-lg text-center">
+        <h3 className="font-bold text-base sm:text-lg">Career Programme</h3>
+        <p className="text-xs sm:text-sm">Learn • Grow • Lead</p>
+      </div>
+    </div>
+
+    {/* ================= RIGHT SIDE ================= */}
+    <div className="text-center lg:text-left">
+      <p className="text-blue-600 font-semibold mb-2 text-sm sm:text-base">
+        About Our Career Programme
+      </p>
+
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
+        Start Strong, <br className="hidden sm:block" /> Grow With Us
+      </h2>
+
+      <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed">
+        Our Career Programme is designed for passionate individuals who want to grow in the tech industry. 
+        We provide a collaborative environment, real-world exposure, and continuous learning to help you 
+        build practical skills and professional confidence. Whether you're starting out or enhancing your expertise, 
+        we prepare you to succeed in the digital world.
+      </p>
+
+      {/* ================= FEATURES ================= */}
+      <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 mb-8">
         
-        {/* LEFT SIDE */}
-        <div className="relative">
-          <div className="relative bg-gray-200 rounded-[40px] overflow-hidden">
-            <img
-              src="https://img.freepik.com/free-photo/man-working-night_1098-12798.jpg?ga=GA1.1.1312737827.1743758138&semt=ais_wordcount_boost&w=740&q=80" // Replace with your image
-              alt="About"
-              className="w-full h-full object-cover"
-            />
+        {/* Feature 1 */}
+        <div className="flex items-start gap-4">
+          <div className="bg-blue-100 p-3 sm:p-4 rounded-full flex-shrink-0">
+            <FaUsers className="text-blue-600 text-lg sm:text-xl" />
           </div>
-
-          {/* 10+ Years Badge */}
-          <div className="absolute top-6 right-6 bg-blue-600 text-white px-5 py-2 rounded-md shadow-lg">
-            <h3 className="font-bold text-lg">10+ Years</h3>
-            <p className="text-sm">Experience</p>
+          <div>
+            <h4 className="text-lg sm:text-xl font-bold text-gray-900">
+              Collaborative Culture
+            </h4>
+            <p className="text-gray-500 text-sm">
+              Work in a supportive and innovative team environment
+            </p>
           </div>
         </div>
 
-        {/* RIGHT SIDE */}
-        <div>
-          <p className="text-blue-600 font-semibold mb-2">About Trident</p>
-
-          <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
-            Nurturing Talent, <br /> Fueling Growth
-          </h2>
-
-          <p className="text-gray-600 mb-8">
-            Nullam facilisis quam ac mi vulputate, ac finibus eros molestie.
-            Donec tristique erat et felis cursus, a pretium neque fringilla.
-            Integer mi turpis, hendrerit id diam id, consequat mollis erat mauris aliquam libero nulla.
-          </p>
-
-          {/* STATS */}
-          <div className="flex gap-10 mb-8">
-            <div className="flex items-center gap-4">
-              <div className="bg-blue-100 p-4 rounded-full">
-                <FaUsers className="text-blue-600 text-xl" />
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-gray-900">25000+</h4>
-                <p className="text-gray-500 text-sm">Has find their jobs</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="bg-blue-100 p-4 rounded-full">
-                <FaUserTie className="text-blue-600 text-xl" />
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-gray-900">50+</h4>
-                <p className="text-gray-500 text-sm">Recruiter</p>
-              </div>
-            </div>
+        {/* Feature 2 */}
+        <div className="flex items-start gap-4">
+          <div className="bg-blue-100 p-3 sm:p-4 rounded-full flex-shrink-0">
+            <FaUserTie className="text-blue-600 text-lg sm:text-xl" />
           </div>
-
-          {/* BUTTON + CALL */}
-          <div className="flex items-center gap-6">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition">
-              Read More
-            </button>
-
-            <div className="flex items-center gap-3">
-              <div className="bg-black text-white p-3 rounded-md">
-                <FaPhoneAlt />
-              </div>
-              <div>
-                <p className="text-gray-500 text-sm">Call us</p>
-                <p className="font-semibold text-gray-900">
-                  +91 99388 10752
-                </p>
-              </div>
-            </div>
+          <div>
+            <h4 className="text-lg sm:text-xl font-bold text-gray-900">
+              Mentorship & Learning
+            </h4>
+            <p className="text-gray-500 text-sm">
+              Continuous skill development and guidance
+            </p>
           </div>
         </div>
 
       </div>
-    </section>
+
+      {/* ================= BUTTON + CALL ================= */}
+      <div className="flex flex-col sm:flex-row items-center lg:items-start gap-6">
+        
+        <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition">
+          Explore Opportunities
+        </button>
+
+        <div className="flex items-center gap-3">
+          <div className="bg-black text-white p-3 rounded-md">
+            <FaPhoneAlt />
+          </div>
+          <div className="text-center sm:text-left">
+            <p className="text-gray-500 text-sm">Career Enquiries</p>
+            <p className="font-semibold text-gray-900">
+              +91 99388 10752
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 
     <section className="relative w-full h-[350px] md:h-[400px] overflow-hidden">
       
